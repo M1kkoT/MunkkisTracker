@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Mikko/AndroidStudioProjects/MunkkisTracker/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/kertt/AndroidStudioProjects/MunkkisTracker/app/src/main/res/layout/activity_hall_of_fame.xml" value="0.268" />
+        <entry key="..\:/Users/kertt/AndroidStudioProjects/MunkkisTracker/app/src/main/res/layout/activity_main.xml" value="0.268" />
+        <entry key="..\:/Users/kertt/AndroidStudioProjects/MunkkisTracker/app/src/main/res/layout/activity_syota_tiedot.xml" value="0.268" />
       </map>
     </option>
   </component>
