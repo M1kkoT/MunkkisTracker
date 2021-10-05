@@ -16,6 +16,9 @@
             android:name=".Paivakirja"
             android:exported="true" />
         <activity
+            android:name=".SyotaTiedot"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
