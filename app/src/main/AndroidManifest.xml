@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MunkkisTracker">
         <activity
-            android:name=".HallOfFame"
+            android:name=".HallOfFameActivity"
             android:exported="true" />
         <activity
-            android:name=".Paivakirja"
+            android:name=".PaivakirjaActivity"
             android:exported="true" />
         <activity
-            android:name=".SyotaTiedot"
+            android:name=".SyotaTiedotActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
