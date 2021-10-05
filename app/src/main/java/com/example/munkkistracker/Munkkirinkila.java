@@ -6,6 +6,12 @@ public class Munkkirinkila implements Munkki{ //luokka munkkirinkilän tiedoille
     private float sugar;
     private int cal;
 
+    public Munkkirinkila() {
+        this.cal = 328;
+        this.fat = 14;
+        this.sugar = 7;
+    }
+
     @Override
     public float getRasva() {
         return this.fat;
