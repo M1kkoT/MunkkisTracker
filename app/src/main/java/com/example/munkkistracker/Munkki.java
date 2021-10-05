@@ -1,4 +1,5 @@
 package com.example.munkkistracker;
 
-public class Munkki {
+public interface Munkki {
+
 }
