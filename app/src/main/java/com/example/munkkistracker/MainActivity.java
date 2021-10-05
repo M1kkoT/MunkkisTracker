@@ -27,17 +27,17 @@ public class MainActivity extends AppCompatActivity {
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, PaivakirjaActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(MainActivity.this, PaivakirjaActivity.class);
+                startActivity(intent2);
 
             }
         });
-        Button fame = findViewById(R.id.button);  //nappi siirtyy seuraavaan activityyn
+        Button fame = findViewById(R.id.button3);  //nappi siirtyy seuraavaan activityyn
         fame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HallOfFameActivity.class);
-                startActivity(intent);
+                Intent intent3 = new Intent(MainActivity.this, HallOfFameActivity.class);
+                startActivity(intent3);
 
             }
         });

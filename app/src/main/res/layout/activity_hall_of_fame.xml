@@ -7,11 +7,56 @@
     android:background="#BA8686"
     tools:context=".HallOfFameActivity">
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/otsikko_hallOfFame"
+        android:layout_width="207dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Hall of Fame"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/otsikko_suosikkiMunkki"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="110dp" />
+        android:layout_marginStart="16dp"
+        android:text="Viikon suosikki munkki:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <TextView
+        android:id="@+id/otsikko_arvosana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Arvosana:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <TextView
+        android:id="@+id/textView_suosikki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/otsikko_suosikkiMunkki"
+        app:layout_constraintStart_toEndOf="@+id/otsikko_suosikkiMunkki" />
+
+    <TextView
+        android:id="@+id/textView_arvosana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="arvosana"
+        app:layout_constraintBaseline_toBaselineOf="@+id/otsikko_arvosana"
+        app:layout_constraintStart_toEndOf="@+id/otsikko_arvosana" />
 </androidx.constraintlayout.widget.ConstraintLayout>
