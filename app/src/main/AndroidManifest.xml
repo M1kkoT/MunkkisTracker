@@ -10,28 +10,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MunkkisTracker">
         <activity
+            android:name=".TietoActivity"
+            android:exported="true"
+            android:parentActivityName=".PaivakirjaActivity" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        <activity
             android:name=".HallOfFameActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
 
         <activity
             android:name=".PaivakirjaActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="true" />
-            <meta-data
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
 
         <activity
             android:name=".SyotaTiedotActivity"
-            android:parentActivityName=".MainActivity"
-            android:exported="true" />
-            <meta-data
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
