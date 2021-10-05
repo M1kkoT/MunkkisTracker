@@ -12,6 +12,8 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syota_tiedot);
 
+
+        //Asetetaan TextView tekstit
         TextView maara = findViewById(R.id.tv_maara);
         maara.setText("Määrä");
 
