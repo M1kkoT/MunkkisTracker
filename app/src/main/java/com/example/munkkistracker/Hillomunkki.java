@@ -21,8 +21,5 @@ public class Hillomunkki implements Munkki { //luokka hillomunkin tiedoille
         return this.sugar;
     }
 
-    @Override
-    public float getHinta() {
-        return this.cost;
-    }
+
 }

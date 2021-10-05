@@ -21,8 +21,5 @@ public class Munkkirinkila implements Munkki{ //luokka munkkirinkilän tiedoille
         return this.sugar;
     }
 
-    @Override
-    public float getHinta() {
-        return this.cost;
-    }
+
 }

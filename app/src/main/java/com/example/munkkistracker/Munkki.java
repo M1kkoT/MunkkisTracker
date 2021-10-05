@@ -8,6 +8,6 @@ public interface Munkki {  //rajapinta munkeille
 
     public float getSokeri();
 
-    public float getHinta();
+
 
 }
