@@ -1,6 +1,6 @@
 package com.example.munkkistracker;
 
-public interface Munkki {
+public interface Munkki {  //rajapinta munkeille
 
     public float getRasva();
 

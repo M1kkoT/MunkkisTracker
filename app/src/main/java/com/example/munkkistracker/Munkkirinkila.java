@@ -1,6 +1,6 @@
 package com.example.munkkistracker;
 
-public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoille
+public class Munkkirinkila implements Munkki{ //luokka munkkirinkilän tiedoille
     private float fat;
     private float cost;
     private float sugar;
