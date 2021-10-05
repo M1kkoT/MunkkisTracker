@@ -11,13 +11,27 @@
         android:theme="@style/Theme.MunkkisTracker">
         <activity
             android:name=".HallOfFameActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
         <activity
             android:name=".PaivakirjaActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
         <activity
             android:name=".SyotaTiedotActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
