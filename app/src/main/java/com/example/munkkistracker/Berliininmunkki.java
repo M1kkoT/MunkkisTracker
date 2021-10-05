@@ -5,6 +5,12 @@ public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoil
     private float sugar;
     private int cal;
 
+    public Berliininmunkki(){
+        this.fat = 15;
+        this.sugar = 36;
+        this.cal = 405;
+    }
+
     @Override
     public float getRasva() {
         return this.fat;
