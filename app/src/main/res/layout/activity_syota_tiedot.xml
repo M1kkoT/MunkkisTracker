@@ -70,6 +70,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="52dp"
+        android:backgroundTint="#BAA061"
         android:text="@string/b_syötä_tallenna"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
