@@ -26,6 +26,8 @@ public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoil
         return this.sugar;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Berliininmunkki";
+    }
 }
