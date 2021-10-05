@@ -7,4 +7,5 @@
     <string name="rb_berlin">Berliininmunkki</string>
     <string name="rb_hillo">Hillomunkki</string>
     <string name="rb_rinkila">Munkkirinkilä</string>
+    <string name="title">MunkkiTracker</string>
 </resources>
