@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button tiedot = findViewById(R.id.button);  //nappi siirtyy seuraavaan activityyn
+        Button tiedot = findViewById(R.id.button);  //nappi siirtyy syötä tiedot activityyn
         tiedot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Button diary = findViewById(R.id.button2); //nappi siirtyy seuraavaan activityyn
+        Button diary = findViewById(R.id.button2); //nappi siirtyy päiväkirjaactivityyn
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Button fame = findViewById(R.id.button3);  //nappi siirtyy seuraavaan activityyn
+        Button fame = findViewById(R.id.button3);  //nappi siirtyy hall of fame activityyn
         fame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
