@@ -21,6 +21,9 @@ public class InfoActivity extends AppCompatActivity {
         TextView nimet = findViewById(R.id.info_nimet);
         nimet.setText("Aasa Lilian \n Kyyrä Kerttu \n Oksanen Sara \n Tanhola Mikko");
 
+        TextView koulu = findViewById(R.id.info_koulu);
+        koulu.setText("Metropolia\nMobiilit Terveyssovellukset\n2021 ");
+
 
 
 
