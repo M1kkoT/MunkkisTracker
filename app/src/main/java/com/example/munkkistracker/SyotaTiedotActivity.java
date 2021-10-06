@@ -65,13 +65,18 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     }
 
                 }
+                Counter counter = new Counter(b, cost, kpl); //luodaan counter
+
                 if (!totuus){
                     PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
+                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), cost, date)); //lisää tiedot singleton luokkkaan
+                }
+                else{
+                    Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota
 
                 }
 
-                Counter counter = new Counter(b, cost, kpl); //luodaan counter
-                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), cost, date)); //lisää tiedot singleton luokkkaan
+
                 Intent backToMain = new Intent(SyotaTiedotActivity.this, MainActivity.class); //palaa mainactivityyn
                 startActivity(backToMain);
 
