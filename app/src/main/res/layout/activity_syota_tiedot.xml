@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CD6D55"
+    android:background="#DFA155"
     tools:context=".SyotaTiedotActivity">
 
     <RadioGroup
@@ -13,6 +13,7 @@
         android:layout_height="165dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:background="#B67142"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -46,6 +47,7 @@
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
@@ -58,6 +60,7 @@
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_maara"
@@ -70,7 +73,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="52dp"
-        android:backgroundTint="#BAA061"
+        android:backgroundTint="#B67142"
         android:text="@string/b_syötä_tallenna"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,6 +152,7 @@
         android:scaleX="2"
         android:scaleY="2"
         android:text="Syötä Tiedot"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,6 +166,7 @@
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
