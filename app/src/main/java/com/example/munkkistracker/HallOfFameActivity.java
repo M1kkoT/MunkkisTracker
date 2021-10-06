@@ -28,5 +28,7 @@ public class HallOfFameActivity extends AppCompatActivity {
         TextView yhtMaara = findViewById(R.id.tv_yhteensa_maara);
         yhtMaara.setText("Olet syönyt yhteensä MÄÄRÄ");
 
+
+
     }
 }
