@@ -3,6 +3,5 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/archivo_black</item>
         <item>@font/fascinate_inline</item>
-        <item>@font/monofett</item>
     </array>
 </resources>

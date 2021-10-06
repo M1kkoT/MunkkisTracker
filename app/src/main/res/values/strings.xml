@@ -8,4 +8,5 @@
     <string name="rb_hillo">Hillomunkki</string>
     <string name="rb_rinkila">Munkkirinkilä</string>
     <string name="title">MunkkiTracker</string>
+    <string name="nappi_tekijat">Tekijät</string>
 </resources>
