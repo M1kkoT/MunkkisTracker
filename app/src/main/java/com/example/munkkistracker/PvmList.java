@@ -30,4 +30,7 @@ public class PvmList {
 
         return paivat;
     }
+    public String getPaiva(int i){ //tällä saa yhden päivän indeksillä i
+        return paivat.get(i);
+    }
 }
