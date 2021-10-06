@@ -11,7 +11,12 @@
         android:theme="@style/Theme.MunkkisTracker">
         <activity
             android:name=".InfoActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
         <activity
             android:name=".TietoActivity"
             android:exported="true"
