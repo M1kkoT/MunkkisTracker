@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MunkkisTracker">
         <activity
+            android:name=".InfoActivity"
+            android:exported="true" />
+        <activity
             android:name=".TietoActivity"
             android:exported="true"
             android:parentActivityName=".PaivakirjaActivity" />
@@ -17,6 +20,7 @@
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".MainActivity" />
+
         <activity
             android:name=".HallOfFameActivity"
             android:exported="true"
