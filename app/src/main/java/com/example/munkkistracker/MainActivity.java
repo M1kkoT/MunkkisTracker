@@ -42,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        Button info = findViewById(R.id.button5); //Nappi siirtää Info-Activityyn
+        info.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View view){
+               Intent intent5 = new Intent(MainActivity.this,InfoActivity.class);
+               startActivity(intent5);
+           }
+        });
 
 
 
