@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_syota_tiedot"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
@@ -19,18 +19,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
-        android:id="@+id/button_paivaskirja"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#BAA061"
         android:text="@string/nappi2"
-        app:layout_constraintBottom_toTopOf="@+id/button_halloffame"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_syota_tiedot" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
-        android:id="@+id/button_halloffame"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="248dp"
