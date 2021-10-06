@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button tiedot = findViewById(R.id.button);  //nappi siirtyy syötä tiedot activityyn
+        Button tiedot = findViewById(R.id.button_syota_tiedot);  //nappi siirtyy syötä tiedot activityyn
         tiedot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Button diary = findViewById(R.id.button2); //nappi siirtyy päiväkirjaactivityyn
+        Button diary = findViewById(R.id.button_paivaskirja); //nappi siirtyy päiväkirjaactivityyn
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Button fame = findViewById(R.id.button3);  //nappi siirtyy hall of fame activityyn
+        Button fame = findViewById(R.id.button_halloffame);  //nappi siirtyy hall of fame activityyn
         fame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

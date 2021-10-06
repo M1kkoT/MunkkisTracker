@@ -1,16 +1,16 @@
 package com.example.munkkistracker;
 
 
-import java.lang.reflect.Array;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 // singleton luokka munkkilistan tallennukseen
 // lisää munkki -> MunkkiList.getInstance().getMunkit.add(object);
-// koko lista -> MunkkiList.getInstance().getMunkit()
+// koko lista -> MunkkiList.getInstance().getMunkit();
 
 public class MunkkiList {
-    private List<Munkki> munkit;
+    private List<Munkkitiedot> munkit;
     private static final MunkkiList ourInstance = new MunkkiList();
 
     public static MunkkiList getInstance() {
@@ -25,12 +25,12 @@ public class MunkkiList {
 
     }
 
-    public List<Munkki> getMunkit() { //tällä saa koko listan
+    public List<Munkkitiedot> getMunkit() { //tällä saa koko listan
 
         return munkit;
     }
 
-    public Munkki getMunkki(int luku){ //tällä saa yhden munkin listasta indeksillä i
+    public Munkkitiedot getMunkkiTiedot(int luku){ //tällä saa yhden munkin listasta indeksillä luku
         return munkit.get(luku);
 
     }

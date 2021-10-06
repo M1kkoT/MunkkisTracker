@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class PaivakirjaActivity extends AppCompatActivity {
-    private static final String EXTRA = "index";
+    public static final String EXTRA = "index";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +25,7 @@ public class PaivakirjaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_paivakirja);
         ListView lv = findViewById(R.id.lista);
 
-        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()); //tällä saa päivämäärän
-        TextView teksti = findViewById(R.id.textView4); //testitextview päivämäärälle
-        teksti.setText(date);
 
-        //testikoodia listviewiin
-
-        PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
-        PvmList.getInstance().getPvm().add(date);
 
 
         lv.setAdapter(new ArrayAdapter<String>( //adapteri listviewille
