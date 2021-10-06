@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Button diary = findViewById(R.id.button_paivaskirja); //nappi siirtyy päiväkirjaactivityyn
+        Button diary = findViewById(R.id.button_paivakirja); //nappi siirtyy päiväkirjaactivityyn
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
