@@ -2,7 +2,7 @@
     <string name="app_name">MunkkisTracker</string>
     <string name="nappi1">Syötä tiedot</string>
     <string name="nappi2">Päiväkirja</string>
-    <string name="nappi3">HallOfFame</string>
+    <string name="nappi3">Hall Of Fame</string>
     <string name="b_syötä_tallenna">Tallenna</string>
     <string name="rb_berlin">Berliininmunkki</string>
     <string name="rb_hillo">Hillomunkki</string>
