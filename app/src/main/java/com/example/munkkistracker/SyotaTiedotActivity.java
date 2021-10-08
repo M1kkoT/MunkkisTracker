@@ -44,14 +44,39 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         float cost = 2;
         Munkki b = new Berliininmunkki();
 
+
+
         //onclicklistener tallenna buttonille
+
         Button tallenna = findViewById(R.id.button_tallenna);
         tallenna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
+                int koko = PvmList.getInstance().getPvm().size(); //tallennettujen tietojen listan koko
+                boolean totuus = false; //false niin pvm ei ole jo listalla, true niin on
+                if (koko > 0){
+                    for (int i = 0; i < koko ; i++){ //for looppi käy läpi pvmlistan ja vaihtaa totuuden arvoon "true" jos nykyinen pvm on jo listalla
+                        String pvm = PvmList.getInstance().getPaiva(i);
+                        if (pvm.equals(date)){
+                            totuus = true;
+                        }
+
+
+                    }
+
+                }
                 Counter counter = new Counter(b, cost, kpl); //luodaan counter
-                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), cost, date)); //lisää tiedot singleton luokkkaan
+
+                if (!totuus){
+                    PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
+                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), cost, date)); //lisää tiedot singleton luokkkaan
+                }
+                else{
+                    Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota
+
+                }
+
+
                 Intent backToMain = new Intent(SyotaTiedotActivity.this, MainActivity.class); //palaa mainactivityyn
                 startActivity(backToMain);
 
