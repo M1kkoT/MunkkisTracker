@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,8 +41,11 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         EditText volume = findViewById(R.id.editText_maara);
         EditText hinta = findViewById(R.id.editTextHinta);
 
-        int kpl = 3; //testikoodia
-        float cost = 2;
+
+
+
+
+
         Munkki b = new Berliininmunkki();
 
 
@@ -65,14 +69,20 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     }
 
                 }
+                int kpl = Integer.parseInt(volume.getText().toString()); // ottaa kplmäärän syötteestä
+                float cost = Integer.parseInt(hinta.getText().toString());//ottaa hinnan syötteestä
                 Counter counter = new Counter(b, cost, kpl); //luodaan counter
 
                 if (!totuus){
                     PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
-                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), cost, date)); //lisää tiedot singleton luokkkaan
+                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), counter.getCost(), date)); //lisää tiedot singleton luokkkaan
                 }
                 else{
                     Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota
+                    munkki.setCal(munkki.getCal() + counter.getKcal());  //lisätään uudet arvot vanhoihin
+                    munkki.setFat(munkki.getFat() + counter.getFat());
+                    munkki.setSugar(munkki.getSugar() + counter.getSugar());
+                    munkki.setHinta(munkki.getHinta() + counter.getCost());
 
                 }
 

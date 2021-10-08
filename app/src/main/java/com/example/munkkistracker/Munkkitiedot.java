@@ -35,14 +35,27 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         return pvm;
     }
 
+    public void setFat(float fat) {
+        this.fat = fat;
+    }
+
+    public void setSugar(float sugar) {
+        this.sugar = sugar;
+    }
+
+    public void setCal(int cal) {
+        this.cal = cal;
+    }
+
+    public void setHinta(float hinta) {
+        this.hinta = hinta;
+    }
+
     @Override
     public String toString() {
-        return "Munkkitiedot{" +
-                "fat=" + fat +
-                ", sugar=" + sugar +
-                ", cal=" + cal +
-                ", hinta=" + hinta +
-                ", pvm='" + pvm + '\'' +
-                '}';
+        return "fat=" + fat + " g" +
+                ", sugar=" + sugar + " g" +
+                ", cal=" + cal + " Kcal" +
+                ", hinta=" + hinta + " €";
     }
 }
