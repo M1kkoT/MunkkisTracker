@@ -1,8 +1,8 @@
 package com.example.munkkistracker;
 
 public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoille
-    private float fat;
-    private float sugar;
+    private double fat;
+    private double sugar;
     private int cal;
 
     public Berliininmunkki(){
@@ -12,7 +12,7 @@ public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoil
     }
 
     @Override
-    public float getRasva() {
+    public double getRasva() {
         return this.fat;
     }
 
@@ -22,7 +22,8 @@ public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoil
     }
 
     @Override
-    public float getSokeri() {
+
+    public double getSokeri() {
         return this.sugar;
     }
 

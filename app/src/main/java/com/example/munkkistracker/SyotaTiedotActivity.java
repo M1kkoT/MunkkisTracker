@@ -8,7 +8,11 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -46,7 +50,9 @@ public class SyotaTiedotActivity extends AppCompatActivity {
 
 
 
-        Munkki b = new Berliininmunkki();
+
+
+
 
 
 
@@ -69,8 +75,38 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     }
 
                 }
-                int kpl = Integer.parseInt(volume.getText().toString()); // ottaa kplmäärän syötteestä
-                float cost = Integer.parseInt(hinta.getText().toString());//ottaa hinnan syötteestä
+                Munkki b; //alustaa munkin
+
+                RadioButton rb = findViewById(R.id.rb_Berlin); //alustaa radiobuttonit
+                RadioButton rh = findViewById(R.id.rb_Hillo);
+                RadioButton rr = findViewById(R.id.rb_rinkila);
+
+                if(rb.isChecked()){  //katsoo mikä radiobutton on painettu ja jos ei mitään antaa ilmoituksen nappia painettaessa
+                    Munkki uusi = new Berliininmunkki();
+                    b = uusi;
+
+                }else if(rh.isChecked()){
+                    Munkki uusi = new Hillomunkki();
+                    b = uusi;
+
+                }else if(rr.isChecked()){
+                    Munkki uusi = new Munkkirinkila();
+                    b = uusi;
+
+                }else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "valitse munkki", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
+                    toast.show();
+                    return;
+
+
+                }
+                if (volume.getText().toString().isEmpty() || hinta.getText().toString().isEmpty()){ //katsoo onko syötteet tyhjiä
+                    Toast toast = Toast.makeText(getApplicationContext(), "syötä tiedot", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
+                    toast.show();
+                    return;
+                }
+                double kpl = Double.parseDouble(volume.getText().toString()); // ottaa kplmäärän syötteestä
+                double cost = Double.parseDouble(hinta.getText().toString());//ottaa hinnan syötteestä
                 Counter counter = new Counter(b, cost, kpl); //luodaan counter
 
                 if (!totuus){

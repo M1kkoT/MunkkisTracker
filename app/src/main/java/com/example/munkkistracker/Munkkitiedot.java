@@ -1,13 +1,13 @@
 package com.example.munkkistracker;
 
 public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennetaan singleton luokkaan
-    private float fat;
-    private float sugar;
+    private double fat;
+    private double sugar;
     private int cal;
-    private float hinta;
+    private double hinta;
     private String pvm;
 
-    public Munkkitiedot(float rasva, float sokeri, int kalori , float cost, String paiva){
+    public Munkkitiedot(double rasva, double sokeri, int kalori , double cost, String paiva){
         this.fat = rasva;
         this.sugar = sokeri;
         this.cal = kalori;
@@ -15,11 +15,11 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         this.pvm = paiva;
     }
 
-    public float getFat() {
+    public double getFat() {
         return fat;
     }
 
-    public float getSugar() {
+    public double getSugar() {
         return sugar;
     }
 
@@ -27,7 +27,7 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         return cal;
     }
 
-    public float getHinta() {
+    public double getHinta() {
         return hinta;
     }
 
@@ -35,11 +35,11 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         return pvm;
     }
 
-    public void setFat(float fat) {
+    public void setFat(double fat) {
         this.fat = fat;
     }
 
-    public void setSugar(float sugar) {
+    public void setSugar(double sugar) {
         this.sugar = sugar;
     }
 
@@ -47,7 +47,7 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         this.cal = cal;
     }
 
-    public void setHinta(float hinta) {
+    public void setHinta(double hinta) {
         this.hinta = hinta;
     }
 
