@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -40,9 +45,14 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         EditText volume = findViewById(R.id.editText_maara);
         EditText hinta = findViewById(R.id.editTextHinta);
 
-        int kpl = 3; //testikoodia
-        float cost = 2;
-        Munkki b = new Berliininmunkki();
+
+
+
+
+
+
+
+
 
 
 
@@ -65,14 +75,50 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     }
 
                 }
+                Munkki b; //alustaa munkin
+
+                RadioButton rb = findViewById(R.id.rb_Berlin); //alustaa radiobuttonit
+                RadioButton rh = findViewById(R.id.rb_Hillo);
+                RadioButton rr = findViewById(R.id.rb_rinkila);
+
+                if(rb.isChecked()){  //katsoo mikä radiobutton on painettu ja jos ei mitään antaa ilmoituksen nappia painettaessa
+                    Munkki uusi = new Berliininmunkki();
+                    b = uusi;
+
+                }else if(rh.isChecked()){
+                    Munkki uusi = new Hillomunkki();
+                    b = uusi;
+
+                }else if(rr.isChecked()){
+                    Munkki uusi = new Munkkirinkila();
+                    b = uusi;
+
+                }else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "valitse munkki", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
+                    toast.show();
+                    return;
+
+
+                }
+                if (volume.getText().toString().isEmpty() || hinta.getText().toString().isEmpty()){ //katsoo onko syötteet tyhjiä
+                    Toast toast = Toast.makeText(getApplicationContext(), "syötä tiedot", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
+                    toast.show();
+                    return;
+                }
+                double kpl = Double.parseDouble(volume.getText().toString()); // ottaa kplmäärän syötteestä
+                double cost = Double.parseDouble(hinta.getText().toString());//ottaa hinnan syötteestä
                 Counter counter = new Counter(b, cost, kpl); //luodaan counter
 
                 if (!totuus){
                     PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
-                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), cost, date)); //lisää tiedot singleton luokkkaan
+                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), counter.getCost(), date)); //lisää tiedot singleton luokkkaan
                 }
                 else{
                     Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota
+                    munkki.setCal(munkki.getCal() + counter.getKcal());  //lisätään uudet arvot vanhoihin
+                    munkki.setFat(munkki.getFat() + counter.getFat());
+                    munkki.setSugar(munkki.getSugar() + counter.getSugar());
+                    munkki.setHinta(munkki.getHinta() + counter.getCost());
 
                 }
 

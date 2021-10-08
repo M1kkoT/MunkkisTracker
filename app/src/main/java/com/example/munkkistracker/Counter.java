@@ -1,14 +1,14 @@
 package com.example.munkkistracker;
 
 public class Counter {
-    private float cost;
+    private double cost;
     private int kcal;
-    private float fat;
-    private float sugar;
-    private int kpl;
+    private double fat;
+    private double sugar;
+    private double kpl;
 
 
-    public Counter(Munkki munkki, float hinta, int lukum) { //konstruktori saa parametreinä munkin, kplhinnan ja lukumäärän
+    public Counter(Munkki munkki, double hinta, double lukum) { //konstruktori saa parametreinä munkin, kplhinnan ja lukumäärän
         this.cost = hinta;
         this.kpl = lukum;
         this. kcal = munkki.getKcal();
@@ -16,24 +16,24 @@ public class Counter {
         this.sugar = munkki.getSokeri();
     }
 
-    public float getCost() {
+    public double getCost() {
         return cost * kpl;
 
     }
 
     public int getKcal() {
-        return kcal * kpl;
+        return (int)(kcal * kpl);
     }
 
-    public float getFat() {
+    public double getFat() {
         return fat * kpl;
     }
 
-    public float getSugar() {
+    public double getSugar() {
         return sugar * kpl;
     }
 
-    public int getKpl() {
+    public double getKpl() {
         return kpl;
     }
 
