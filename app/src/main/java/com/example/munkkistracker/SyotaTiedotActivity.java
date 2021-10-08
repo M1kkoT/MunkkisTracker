@@ -34,7 +34,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         maara.setText("Määrä");
 
         TextView kappale = findViewById(R.id.tv_hinta);
-        kappale.setText("Hinta");
+        kappale.setText("Hinta/Kpl");
 
         TextView syote = findViewById(R.id.tv_syota);
         syote.setText("Syötä tiedot");

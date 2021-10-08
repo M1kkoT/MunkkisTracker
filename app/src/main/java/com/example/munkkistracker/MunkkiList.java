@@ -13,25 +13,19 @@ public class MunkkiList {
     private static final MunkkiList ourInstance = new MunkkiList();
 
     public static MunkkiList getInstance() {
-
-
         return ourInstance;
     }
 
     private MunkkiList() {
         munkit = new ArrayList<>();
-
-
     }
 
     public List<Munkkitiedot> getMunkit() { //tällä saa koko listan
-
         return munkit;
     }
 
     public Munkkitiedot getMunkkiTiedot(int luku){ //tällä saa yhden munkin listasta indeksillä luku
         return munkit.get(luku);
-
     }
 
 }
