@@ -20,7 +20,10 @@ public class TietoActivity extends AppCompatActivity {
         //korvaa XXXX getRasva yms ja textview x omalla Textvievillä
 
         TextView maara = findViewById(R.id.tieto_maara);
-        maara.setText("Olet syönyt yhteensä "+"X-MÄÄRÄ"+" munkkia.");
+        maara.setText("Olet syönyt yhteensä "+"X-MÄÄRÄ"+" munkkia." + " berliininmunkkeja " +
+                MunkkiList.getInstance().getMunkit().get(i).getBerlin() + " Hillomunkkeja " +
+                MunkkiList.getInstance().getMunkit().get(i).getHillo() + " Munkkirinkilöitä " +
+                MunkkiList.getInstance().getMunkit().get(i).getRinkila()); // näillä saa kplmäärät munkeista
 
         TextView valiotsikko =findViewById(R.id.tieto_vali);
         valiotsikko.setText("Niissä on ollut yhteensä:");

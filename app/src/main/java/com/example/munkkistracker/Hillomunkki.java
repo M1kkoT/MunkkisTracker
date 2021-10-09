@@ -28,6 +28,6 @@ public class Hillomunkki implements Munkki { //luokka hillomunkin tiedoille
 
     @Override
     public String toString() {
-        return "Hillomunkki{";
+        return "Hillomunkki";
     }
 }

@@ -11,8 +11,12 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
     private String pvm;
     private ArrayList<Double> ratingslist;
     private int arvostelumaara = 0;
+    private double berlin = 0;
+    private double hillo = 0;
+    private double rinkila = 0;
 
-    public Munkkitiedot(double rasva, double sokeri, int kalori , double cost, String paiva, double rating){
+    public Munkkitiedot(double rasva, double sokeri, int kalori , double cost, String paiva, //konstruktori
+                        double rating, String tyyppi, double kappale){
         this.fat = rasva;
         this.sugar = sokeri;
         this.cal = kalori;
@@ -21,6 +25,13 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         ratingslist = new ArrayList<>();
         ratingslist.add(rating);
         this.arvostelumaara ++;
+        if (tyyppi.equals("Berliininmunkki")){
+            this.berlin += kappale;
+        } else if (tyyppi.equals("Hillomunkki")){
+            this.hillo += kappale;
+        }else if (tyyppi.equals("Munkkirinkila")){
+            this.rinkila += kappale;
+        }
     }
 
     public double getFat() {
@@ -59,6 +70,11 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         this.hinta = hinta;
     }
 
+    public void setArvostelu(double arvostelu) {
+        this.ratingslist.add(arvostelu);
+        this.arvostelumaara ++;
+    }
+
     public double getArvostelu() { //palauttaa keskiarvon arvosteluista
         if (arvostelumaara > 1){
             double summa = 0;
@@ -75,10 +91,34 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
 
     }
 
-    public void setArvostelu(double arvostelu) {
-        this.ratingslist.add(arvostelu);
-        this.arvostelumaara ++;
+
+
+    public double getBerlin() {
+        return berlin;
     }
+
+
+    public double getHillo() {
+        return hillo;
+    }
+
+
+    public double getRinkila() {
+        return rinkila;
+    }
+
+    public void addMunkkiKpl(String munkki, double kpl){
+        if (munkki.equals("Berliininmunkki")){
+            this.berlin += kpl;
+        } else if (munkki.equals("Hillomunkki")){
+            this.hillo += kpl;
+        }else if (munkki.equals("Munkkirinkila")){
+            this.rinkila += kpl;
+        }
+
+    }
+
+
 
     @Override
     public String toString() {

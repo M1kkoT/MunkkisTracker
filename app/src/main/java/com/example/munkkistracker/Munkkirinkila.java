@@ -28,6 +28,6 @@ public class Munkkirinkila implements Munkki{ //luokka munkkirinkilän tiedoille
 
     @Override
     public String toString() {
-        return "Munkkirinkila{";
+        return "Munkkirinkila";
     }
 }
