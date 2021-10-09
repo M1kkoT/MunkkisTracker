@@ -39,7 +39,7 @@ public class TietoActivity extends AppCompatActivity {
 
 
         TextView arvosana = findViewById(R.id.tieto_arvosana);
-        arvosana.setText("Syömiesi munkkien keskiarvo on");
+        arvosana.setText("Syömiesi munkkien keskiarvosana on " + MunkkiList.getInstance().getMunkit().get(i).getArvostelu() + " tähteä");
 
 
 

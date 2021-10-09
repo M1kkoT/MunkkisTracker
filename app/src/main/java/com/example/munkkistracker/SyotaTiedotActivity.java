@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RatingBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,9 @@ import java.util.Date;
 import java.util.Locale;
 
 public class SyotaTiedotActivity extends AppCompatActivity {
+    private boolean arvosteltu = false;
+    private double rating = 0.0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +57,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 PvmList.getInstance().getPvm().add(date + PvmList.getInstance().getPvm().size());
                 String tekst = Integer.toString(MunkkiList.getInstance().getMunkit().size());
                 double testi = Double.parseDouble(tekst);
-                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst));
+                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst, rating));
 
                 //koodi rajoittamaan listan alkioiden määrää testaukseen
                 if (PvmList.getInstance().getPvm().size() > 5) { // vihda tähän luku kuinka ison listan haluat
@@ -63,6 +67,19 @@ public class SyotaTiedotActivity extends AppCompatActivity {
 
             }
         });
+
+        RatingBar arvostelu = findViewById(R.id.ratingBar);//ratingbarin alustus
+        arvostelu.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                if (b){
+                    arvosteltu = true;
+                    rating = arvostelu.getRating();
+
+                }
+            }
+        });
+
 
 
 
@@ -109,16 +126,22 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     b = uusi;
 
                 }else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "valitse munkki", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
+                    Toast toast = Toast.makeText(getApplicationContext(), "Valitse munkki", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
                     toast.show();
                     return;
 
 
                 }
                 if (volume.getText().toString().isEmpty() || hinta.getText().toString().isEmpty()){ //katsoo onko syötteet tyhjiä
-                    Toast toast = Toast.makeText(getApplicationContext(), "syötä tiedot", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
+                    Toast toast = Toast.makeText(getApplicationContext(), "Syötä tiedot", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
                     toast.show();
                     return;
+                }
+                if (!arvosteltu){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Arvostele munkit!", Toast.LENGTH_LONG); //pyytää käyttäjää arvostelemaan munkit
+                    toast.show();
+                    return;
+
                 }
                 double kpl = Double.parseDouble(volume.getText().toString()); // ottaa kplmäärän syötteestä
                 double cost = Double.parseDouble(hinta.getText().toString());//ottaa hinnan syötteestä
@@ -126,7 +149,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
 
                 if (!totuus){
                     PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan jos se ei ole vielä
-                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), counter.getCost(), date)); //lisää tiedot singleton luokkkaan
+                    MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), counter.getCost(), date, rating)); //lisää tiedot singleton luokkkaan
                 }
                 else{
                     Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota
@@ -134,6 +157,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     munkki.setFat(munkki.getFat() + counter.getFat());
                     munkki.setSugar(munkki.getSugar() + counter.getSugar());
                     munkki.setHinta(munkki.getHinta() + counter.getCost());
+                    munkki.setArvostelu(rating);
 
                 }
                 if (PvmList.getInstance().getPvm().size() > 30){ //pitää listoissa maksimissaan 30 alkiota
