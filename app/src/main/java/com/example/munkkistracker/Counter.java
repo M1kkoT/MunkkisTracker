@@ -18,7 +18,6 @@ public class Counter {
 
     public double getCost() {
         return cost * kpl;
-
     }
 
     public int getKcal() {

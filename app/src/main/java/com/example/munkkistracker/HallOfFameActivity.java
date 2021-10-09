@@ -13,20 +13,20 @@ public class HallOfFameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hall_of_fame);
 
         //Asetetaan TextView
-        TextView otsikko = findViewById(R.id.tv_otsikko);
+        TextView otsikko = findViewById(R.id.hall_otsikko);
         otsikko.setText("Hall Of Fame");
 
-        TextView paras = findViewById(R.id.tv_paras);
-        paras.setText("Winner");
+        TextView win = findViewById(R.id.hall_winner);
+        win.setText("WINNER");
 
-        TextView yhtHinta = findViewById(R.id.tv_yhteensa_hinta);
-        yhtHinta.setText("Olet käyttänyt $$ ");
+        //sara testaa, lel
+        int i = 0;
+        double testi = (MunkkiList.getInstance().getMunkit().get(i).getHillo());
 
-        TextView yhtKcl = findViewById(R.id.tv_yhteensa_kcl);
-        yhtKcl.setText("Olet syönyt yhteensä KCL");
+        TextView test = findViewById(R.id.hall_testi);
+        test.setText(String.valueOf(testi));
 
-        TextView yhtMaara = findViewById(R.id.tv_yhteensa_maara);
-        yhtMaara.setText("Olet syönyt yhteensä MÄÄRÄ");
+
 
 
 

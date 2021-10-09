@@ -15,7 +15,7 @@ public class TietoActivity extends AppCompatActivity {
         int i = bundle.getInt(PaivakirjaActivity.EXTRA, 0); //i on listan indeksi
 
         TextView pvm = findViewById(R.id.tieto_pvm);
-        pvm.setText(MunkkiList.getInstance().getMunkit().get(i).getPvm()); //palauttaa listan alkion tostring metodin
+        pvm.setText(MunkkiList.getInstance().getMunkit().get(i).getPvm());
         //textview x .setText(MunkkiList.getInstance().getMunkit().get(i).XXXX tällä saa tietyn tiedon jos haluaa monta tekstikenttää
         //korvaa XXXX getRasva yms ja textview x omalla Textvievillä
 
@@ -24,13 +24,13 @@ public class TietoActivity extends AppCompatActivity {
                 ); // näillä saa kplmäärät munkeista
 
         TextView ber = findViewById(R.id.tieto_ber);
-        ber.setText("Berliininmunkkeja "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getBerlin()));
+        ber.setText("Berliininmunkkeja "+(MunkkiList.getInstance().getMunkit().get(i).getBerlin()));
 
         TextView hillo = findViewById(R.id.tieto_hillo);
-        hillo.setText("Hillomunkkeja "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getHillo()));
+        hillo.setText("Hillomunkkeja "+(MunkkiList.getInstance().getMunkit().get(i).getHillo()));
 
         TextView rin = findViewById(R.id.tieto_rink);
-        rin.setText("Munkkirinkeleitä "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getRinkila())+"\n");
+        rin.setText("Munkkirinkeleitä "+(MunkkiList.getInstance().getMunkit().get(i).getRinkila())+"\n");
 
         TextView valiotsikko =findViewById(R.id.tieto_vali);
         valiotsikko.setText("Niissä on ollut yhteensä:");
