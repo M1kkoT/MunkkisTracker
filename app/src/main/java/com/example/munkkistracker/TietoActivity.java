@@ -19,9 +19,11 @@ public class TietoActivity extends AppCompatActivity {
         //textview x .setText(MunkkiList.getInstance().getMunkit().get(i).XXXX tällä saa tietyn tiedon jos haluaa monta tekstikenttää
         //korvaa XXXX getRasva yms ja textview x omalla Textvievillä
 
+        //Laskee kuinka monta munkkia on yhteensä syöty
+        double kokoluku = (MunkkiList.getInstance().getMunkit().get(i).getHillo()) + (MunkkiList.getInstance().getMunkit().get(i).getBerlin()) + (MunkkiList.getInstance().getMunkit().get(i).getRinkila());
+
         TextView maara = findViewById(R.id.tieto_maara);
-        maara.setText("Olet syönyt yhteensä "+"X-MÄÄRÄ"+" munkkia.\n "
-                ); // näillä saa kplmäärät munkeista
+        maara.setText("Olet syönyt yhteensä "+kokoluku+" munkkia.\n ");
 
         TextView ber = findViewById(R.id.tieto_ber);
         ber.setText("Berliininmunkkeja "+(MunkkiList.getInstance().getMunkit().get(i).getBerlin()));

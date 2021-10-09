@@ -21,7 +21,7 @@ public class HallOfFameActivity extends AppCompatActivity {
 
         //sara testaa, lel
         int i = 0;
-        double testi = (MunkkiList.getInstance().getMunkit().get(i).getHillo());
+        double testi = (MunkkiList.getInstance().getMunkit().get(i).getHillo())+(MunkkiList.getInstance().getMunkit().get(i).getBerlin());
 
         TextView test = findViewById(R.id.hall_testi);
         test.setText(String.valueOf(testi));
