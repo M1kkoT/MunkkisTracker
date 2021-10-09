@@ -32,7 +32,6 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()); //tällä saa päivämäärän
 
 
-
         //Asetetaan TextView tekstit
         TextView maara = findViewById(R.id.tv_maara);
         maara.setText("Määrä");
@@ -64,10 +63,8 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     PvmList.getInstance().getPvm().remove(0);
                     MunkkiList.getInstance().getMunkit().remove(0);
                 }
-
             }
         });
-
         RatingBar arvostelu = findViewById(R.id.ratingBar);//ratingbarin alustus
         arvostelu.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -81,15 +78,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         });
 
 
-
-
-
-
-
-
-
         //onclicklistener tallenna buttonille
-
         Button tallenna = findViewById(R.id.button_tallenna);
         tallenna.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,10 +91,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                         if (pvm.equals(date)){
                             totuus = true;
                         }
-
-
                     }
-
                 }
                 Munkki b; //alustaa munkin
 
@@ -116,20 +102,16 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 if(rb.isChecked()){  //katsoo mikä radiobutton on painettu ja jos ei mitään antaa ilmoituksen nappia painettaessa
                     Munkki uusi = new Berliininmunkki();
                     b = uusi;
-
                 }else if(rh.isChecked()){
                     Munkki uusi = new Hillomunkki();
                     b = uusi;
-
                 }else if(rr.isChecked()){
                     Munkki uusi = new Munkkirinkila();
                     b = uusi;
-
                 }else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Valitse munkki", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
                     toast.show();
                     return;
-
 
                 }
                 if (volume.getText().toString().isEmpty() || hinta.getText().toString().isEmpty()){ //katsoo onko syötteet tyhjiä
@@ -141,7 +123,6 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "Arvostele munkit!", Toast.LENGTH_LONG); //pyytää käyttäjää arvostelemaan munkit
                     toast.show();
                     return;
-
                 }
                 double kpl = Double.parseDouble(volume.getText().toString()); // ottaa kplmäärän syötteestä
                 double cost = Double.parseDouble(hinta.getText().toString());//ottaa hinnan syötteestä
@@ -167,13 +148,9 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     MunkkiList.getInstance().getMunkit().remove(0);
                 }
 
-
                 Intent backToMain = new Intent(SyotaTiedotActivity.this, MainActivity.class); //palaa mainactivityyn
                 startActivity(backToMain);
-
-
             }
         });
-
     }
 }

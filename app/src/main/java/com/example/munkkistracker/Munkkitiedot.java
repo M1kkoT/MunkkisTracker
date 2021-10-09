@@ -89,17 +89,13 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         }
     }
 
-
-
     public double getBerlin() {
         return berlin;
     }
 
-
     public double getHillo() {
         return hillo;
     }
-
 
     public double getRinkila() {
         return rinkila;
@@ -115,8 +111,6 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         }
 
     }
-
-
 
     @Override
     public String toString() {

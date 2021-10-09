@@ -24,7 +24,5 @@ public class InfoActivity extends AppCompatActivity {
         TextView koulu = findViewById(R.id.info_koulu);
         koulu.setText("               Metropolia\nMobiilit Terveyssovellukset\n                  2021");
 
-
-
     }
 }
