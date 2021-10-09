@@ -15,19 +15,14 @@ public class PvmList {
     private static final PvmList ourInstance = new PvmList();
 
     public static PvmList getInstance() {
-
-
         return ourInstance;
     }
 
     private PvmList() {
         paivat = new ArrayList<>();
-
-
     }
 
     public List<String> getPvm() { //tällä saa koko listan
-
         return paivat;
     }
     public String getPaiva(int i){ //tällä saa yhden päivän indeksillä i

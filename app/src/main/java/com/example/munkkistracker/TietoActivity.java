@@ -38,7 +38,7 @@ public class TietoActivity extends AppCompatActivity {
         valiotsikko.setText("Niissä on ollut yhteensä:");
 
         TextView kalori = findViewById(R.id.tieto_kcl);
-        kalori.setText(MunkkiList.getInstance().getMunkit().get(i).getCal()+" kaloria.");
+        kalori.setText("Kaloreita "+MunkkiList.getInstance().getMunkit().get(i).getCal()+"kcl");
 
         TextView rasva = findViewById(R.id.tieto_rasva);
         rasva.setText("rasvaa "+ MunkkiList.getInstance().getMunkit().get(i).getFat()+"g");
@@ -54,6 +54,5 @@ public class TietoActivity extends AppCompatActivity {
 
         TextView huom = findViewById(R.id.tieto_huom); //Tätä ei sitten tarvii muokata sen enempää
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
-
     }
 }

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class HallOfFameActivity extends AppCompatActivity {
 
     @Override
@@ -20,25 +22,68 @@ public class HallOfFameActivity extends AppCompatActivity {
         TextView win = findViewById(R.id.hall_winner);
         win.setText("WINNER");
 
-        //sara testaa, lel
-
-        //TÄHÄN (?) jos sais vaikkapa kalori loopin?
-
-        //muuttujia muistiin
-        double berm = 0;
-        double hillom = 0;
+        //Tarvittavat arvot
         double rinkelim = 0;
-        double kaikki = berm + hillom + rinkelim;
+        double berlm = 0;
+        double hillom = 0;
+        double kaikki = 0;
+
+        int kalori = 0;
+        double rasva = 0;
+        double sokeri = 0;
+
+        double raha = 0;
+        double arvosana = 0;
+
+        //Looppi mikä käy arraylistin läpi
+        int max = MunkkiList.getInstance().getMunkit().size();
+        for (int i = 0; i < max; i++){
+            rinkelim += MunkkiList.getInstance().getMunkit().get(i).getRinkila();
+            berlm += MunkkiList.getInstance().getMunkit().get(i).getBerlin();
+            hillom += MunkkiList.getInstance().getMunkit().get(i).getHillo();
+            kaikki = rinkelim + berlm + hillom;
+
+            kalori += MunkkiList.getInstance().getMunkit().get(i).getCal();
+            rasva += MunkkiList.getInstance().getMunkit().get(i).getFat();
+            sokeri += MunkkiList.getInstance().getMunkit().get(i).getSugar();
+
+            raha += MunkkiList.getInstance().getMunkit().get(i).getHinta();
+            arvosana = MunkkiList.getInstance().getMunkit().get(i).getArvostelu();
+        }
 
         //Vaihtaa kuvaa sen mukaan mitä munkkia on eniten
         ImageView winner = findViewById(R.id.image_winner);
-        if (berm > hillom && berm > rinkelim){
+        if (berlm > hillom && berlm > rinkelim){
             winner.setImageResource(R.drawable.winner_ber);
-        }else if(hillom > berm && hillom > rinkelim){
+        }else if(hillom > berlm && hillom > rinkelim){
             winner.setImageResource(R.drawable.winner_hillo);
-        }else if (rinkelim > berm && rinkelim > hillom){
+        }else if (rinkelim > berlm && rinkelim > hillom){
             winner.setImageResource(R.drawable.winner_rinkeli);
+        }else if (berlm == rinkelim && berlm > hillom){
+            winner.setImageResource(R.drawable.berrin);
+        }else if (hillom == berlm && hillom > rinkelim){
+            winner.setImageResource(R.drawable.hilber);
+        }else if (hillom == rinkelim && hillom > berlm){
+            winner.setImageResource(R.drawable.hilrin);
+        }else{
+            winner.setImageResource(R.drawable.tasapeli);
         }
 
+        //TextView asettelu
+
+        TextView vali = findViewById(R.id.hall_vali);
+        vali.setText("Viimeisen 30 merkinnän yhteenveto");
+
+        TextView munkit = findViewById(R.id.hall_munkit);
+        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+"\nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
+
+        TextView ravinto = findViewById(R.id.hall_ravinto);
+        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
+
+        TextView arvot = findViewById(R.id.hall_arvot);
+        arvot.setText("Käytit munkkeihin yhteensä "+raha+"€ \nSyömiesi munkkien keskiarvosana on "+arvosana+" tähteä.");
+
+        TextView huom = findViewById(R.id.hall_huom);
+        huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
     }
 }
