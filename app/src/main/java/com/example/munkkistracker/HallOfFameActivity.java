@@ -21,6 +21,9 @@ public class HallOfFameActivity extends AppCompatActivity {
         win.setText("WINNER");
 
         //sara testaa, lel
+
+        //TÄHÄN (?) jos sais vaikkapa kalori loopin?
+
         //muuttujia muistiin
         double berm = 0;
         double hillom = 0;
