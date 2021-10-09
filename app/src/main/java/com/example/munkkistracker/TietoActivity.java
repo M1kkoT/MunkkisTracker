@@ -20,10 +20,17 @@ public class TietoActivity extends AppCompatActivity {
         //korvaa XXXX getRasva yms ja textview x omalla Textvievillä
 
         TextView maara = findViewById(R.id.tieto_maara);
-        maara.setText("Olet syönyt yhteensä "+"X-MÄÄRÄ"+" munkkia." + " berliininmunkkeja " +
-                MunkkiList.getInstance().getMunkit().get(i).getBerlin() + " Hillomunkkeja " +
-                MunkkiList.getInstance().getMunkit().get(i).getHillo() + " Munkkirinkilöitä " +
-                MunkkiList.getInstance().getMunkit().get(i).getRinkila()); // näillä saa kplmäärät munkeista
+        maara.setText("Olet syönyt yhteensä "+"X-MÄÄRÄ"+" munkkia.\n "
+                ); // näillä saa kplmäärät munkeista
+
+        TextView ber = findViewById(R.id.tieto_ber);
+        ber.setText("Berliininmunkkeja "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getBerlin()));
+
+        TextView hillo = findViewById(R.id.tieto_hillo);
+        hillo.setText("Hillomunkkeja "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getHillo()));
+
+        TextView rin = findViewById(R.id.tieto_rink);
+        rin.setText("Munkkirinkeleitä "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getRinkila())+"\n");
 
         TextView valiotsikko =findViewById(R.id.tieto_vali);
         valiotsikko.setText("Niissä on ollut yhteensä:");
@@ -35,17 +42,16 @@ public class TietoActivity extends AppCompatActivity {
         rasva.setText("rasvaa "+ MunkkiList.getInstance().getMunkit().get(i).getFat()+"g");
 
         TextView sokeri = findViewById(R.id.tieto_sokeri);
-        sokeri.setText("sokeria "+ MunkkiList.getInstance().getMunkit().get(i).getSugar()+"g");
+        sokeri.setText("sokeria "+ MunkkiList.getInstance().getMunkit().get(i).getSugar()+"g\n");
 
         TextView hinta = findViewById(R.id.tieto_hinta);
         hinta.setText("Käytit munkkeihin yhteensä " + MunkkiList.getInstance().getMunkit().get(i).getHinta() + " €");
 
-
         TextView arvosana = findViewById(R.id.tieto_arvosana);
         arvosana.setText("Syömiesi munkkien keskiarvosana on " + MunkkiList.getInstance().getMunkit().get(i).getArvostelu() + " tähteä");
 
-
-
+        TextView huom = findViewById(R.id.tieto_huom); //Tätä ei sitten tarvii muokata sen enempää
+        huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
 
     }
 }

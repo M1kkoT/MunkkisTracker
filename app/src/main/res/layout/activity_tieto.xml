@@ -85,6 +85,43 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/tieto_maara"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_rink"
         tools:layout_editor_absoluteX="178dp" />
+
+    <TextView
+        android:id="@+id/tieto_ber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_maara"
+        tools:layout_editor_absoluteX="175dp" />
+
+    <TextView
+        android:id="@+id/tieto_hillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_ber"
+        tools:layout_editor_absoluteX="174dp" />
+
+    <TextView
+        android:id="@+id/tieto_rink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_hillo"
+        tools:layout_editor_absoluteX="179dp" />
+
+    <TextView
+        android:id="@+id/tieto_huom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

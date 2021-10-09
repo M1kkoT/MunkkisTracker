@@ -87,8 +87,6 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         } else {
             return ratingslist.get(0);
         }
-
-
     }
 
 
