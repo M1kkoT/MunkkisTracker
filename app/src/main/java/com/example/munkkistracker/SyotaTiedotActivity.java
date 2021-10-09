@@ -46,8 +46,23 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         EditText hinta = findViewById(R.id.editTextHinta);
 
 
+        Button testi = findViewById(R.id.button_testi); // testinappula jolla voi lisätä listoille alkioita
+        testi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PvmList.getInstance().getPvm().add(date + PvmList.getInstance().getPvm().size());
+                String tekst = Integer.toString(MunkkiList.getInstance().getMunkit().size());
+                double testi = Double.parseDouble(tekst);
+                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst));
 
+                //koodi rajoittamaan listan alkioiden määrää testaukseen
+                if (PvmList.getInstance().getPvm().size() > 5) { // vihda tähän luku kuinka ison listan haluat
+                    PvmList.getInstance().getPvm().remove(0);
+                    MunkkiList.getInstance().getMunkit().remove(0);
+                }
 
+            }
+        });
 
 
 
@@ -110,7 +125,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 Counter counter = new Counter(b, cost, kpl); //luodaan counter
 
                 if (!totuus){
-                    PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan
+                    PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan jos se ei ole vielä
                     MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),counter.getKcal(), counter.getCost(), date)); //lisää tiedot singleton luokkkaan
                 }
                 else{
@@ -120,6 +135,10 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     munkki.setSugar(munkki.getSugar() + counter.getSugar());
                     munkki.setHinta(munkki.getHinta() + counter.getCost());
 
+                }
+                if (PvmList.getInstance().getPvm().size() > 30){ //pitää listoissa maksimissaan 30 alkiota
+                    PvmList.getInstance().getPvm().remove(0);
+                    MunkkiList.getInstance().getMunkit().remove(0);
                 }
 
 

@@ -26,16 +26,16 @@ public class TietoActivity extends AppCompatActivity {
         valiotsikko.setText("Niissä on ollut yhteensä:");
 
         TextView kalori = findViewById(R.id.tieto_kcl);
-        kalori.setText(String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getCal())+" kaloria.");
+        kalori.setText(MunkkiList.getInstance().getMunkit().get(i).getCal()+" kaloria.");
 
         TextView rasva = findViewById(R.id.tieto_rasva);
-        rasva.setText("rasvaa "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getFat())+"g");
+        rasva.setText("rasvaa "+ MunkkiList.getInstance().getMunkit().get(i).getFat()+"g");
 
         TextView sokeri = findViewById(R.id.tieto_sokeri);
-        sokeri.setText("sokeria "+String.valueOf(MunkkiList.getInstance().getMunkit().get(i).getSugar())+"g");
+        sokeri.setText("sokeria "+ MunkkiList.getInstance().getMunkit().get(i).getSugar()+"g");
 
         TextView hinta = findViewById(R.id.tieto_hinta);
-        hinta.setText("Käytit munkkeihin yhteensä "+"€");
+        hinta.setText("Käytit munkkeihin yhteensä " + MunkkiList.getInstance().getMunkit().get(i).getHinta() + " €");
 
 
         TextView arvosana = findViewById(R.id.tieto_arvosana);
