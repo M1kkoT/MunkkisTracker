@@ -34,6 +34,8 @@ public class HallOfFameActivity extends AppCompatActivity {
 
         double raha = 0;
         double arvosana = 0;
+        double ka = 0;
+        int paivat = 0;
 
         //Looppi mikä käy arraylistin läpi
         int max = MunkkiList.getInstance().getMunkit().size();
@@ -48,7 +50,11 @@ public class HallOfFameActivity extends AppCompatActivity {
             sokeri += MunkkiList.getInstance().getMunkit().get(i).getSugar();
 
             raha += MunkkiList.getInstance().getMunkit().get(i).getHinta();
-            arvosana = MunkkiList.getInstance().getMunkit().get(i).getArvostelu();
+
+            arvosana += MunkkiList.getInstance().getMunkit().get(i).getArvostelu();
+            paivat++;
+            ka = arvosana/paivat;
+
         }
 
         //Vaihtaa kuvaa sen mukaan mitä munkkia on eniten
@@ -70,7 +76,6 @@ public class HallOfFameActivity extends AppCompatActivity {
         }
 
         //TextView asettelu
-
         TextView vali = findViewById(R.id.hall_vali);
         vali.setText("Viimeisen 30 merkinnän yhteenveto");
 
@@ -81,7 +86,7 @@ public class HallOfFameActivity extends AppCompatActivity {
         ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
 
         TextView arvot = findViewById(R.id.hall_arvot);
-        arvot.setText("Käytit munkkeihin yhteensä "+raha+"€ \nSyömiesi munkkien keskiarvosana on "+arvosana+" tähteä.");
+        arvot.setText("Käytit munkkeihin yhteensä "+raha+"€ \nSyömiesi munkkien keskiarvosana on "+ka+" tähteä.");
 
         TextView huom = findViewById(R.id.hall_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
