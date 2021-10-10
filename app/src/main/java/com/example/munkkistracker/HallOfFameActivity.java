@@ -10,6 +10,7 @@ import org.w3c.dom.Text;
 
 public class HallOfFameActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,4 +92,5 @@ public class HallOfFameActivity extends AppCompatActivity {
         TextView huom = findViewById(R.id.hall_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
     }
+
 }

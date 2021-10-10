@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,4 +32,5 @@ public class InfoActivity extends AppCompatActivity {
         rkuva.setImageResource(R.drawable.ryhma);
 
     }
+
 }

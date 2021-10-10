@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 public class TietoActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,4 +46,5 @@ public class TietoActivity extends AppCompatActivity {
         TextView huom = findViewById(R.id.tieto_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
     }
+
 }

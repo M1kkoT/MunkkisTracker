@@ -15,14 +15,18 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class SyotaTiedotActivity extends AppCompatActivity {
     private boolean arvosteltu = false;
     private double rating = 0.0;
+    public static final String Talle = "talle";
 
 
     @Override
@@ -55,13 +59,17 @@ public class SyotaTiedotActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tekst = Integer.toString(MunkkiList.getInstance().getMunkit().size());
                 double testi = Double.parseDouble(tekst);
-                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst, rating, "Berliininmunkki", 2));
+                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, "testi" + tekst, 2.5, "Berliininmunkki", 2));
 
                 //koodi rajoittamaan listan alkioiden määrää testaukseen
                 if (MunkkiList.getInstance().getMunkit().size() > 5) { // vihda tähän luku kuinka ison listan haluat
 
                     MunkkiList.getInstance().getMunkit().remove(0);
+
                 }
+                Intent backToMain = new Intent(SyotaTiedotActivity.this, MainActivity.class); //palaa mainactivityyn
+                backToMain.putExtra(Talle, 1);
+                startActivity(backToMain);
             }
         });
         RatingBar arvostelu = findViewById(R.id.ratingBar);//ratingbarin alustus
@@ -146,8 +154,11 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 }
 
                 Intent backToMain = new Intent(SyotaTiedotActivity.this, MainActivity.class); //palaa mainactivityyn
+                backToMain.putExtra(Talle, 1);
                 startActivity(backToMain);
             }
         });
     }
+
+
 }

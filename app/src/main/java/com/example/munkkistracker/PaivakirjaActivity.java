@@ -20,6 +20,7 @@ public class PaivakirjaActivity extends AppCompatActivity {
     public static final String EXTRA = "index";
     private ArrayList<String> paivat;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,4 +46,5 @@ public class PaivakirjaActivity extends AppCompatActivity {
             }
         });
     }
+
 }
