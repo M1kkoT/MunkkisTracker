@@ -87,7 +87,7 @@ public class HallOfFameActivity extends AppCompatActivity {
         ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
 
         TextView arvot = findViewById(R.id.hall_arvot);
-        String cash = String.format("%.2f", raha);
+        String cash = String.format("%.2f", raha); //muokkaa hinnat ja tähdet tulostettaviksi vain 2 desimaalin tarkkuudella
         String average = String.format("%.2f", ka);
         arvot.setText("Käytit munkkeihin yhteensä "+cash+"€ \nSyömiesi munkkien keskiarvosana on "+average+" tähteä.");
 

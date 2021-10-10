@@ -2,7 +2,6 @@ package com.example.munkkistracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,8 +16,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Gson gson;
-    private static final String  Pref = "talle";
-    private static final String Lista = "lista";
+    private static final String  Pref = "talle"; //sharedpreferences munkkilistan nimi
+    private static final String Lista = "lista"; //sharedpreferenceseihin tallennetun json stringin nimi
 
 
 
@@ -26,15 +25,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         gson = new Gson();
+        //tämä osa koodista katsoo, kutsutaanko onCreate() metodia painamalla tallenna nappia SyotatiedotActivityssä
+        //jos kutsutaan, niin ei tarvitse ladata tietoja sharedpreferenceistä
         Intent intent = getIntent();
-        int talle = intent.getIntExtra(SyotaTiedotActivity.Talle, 0);
+        int talle = intent.getIntExtra(SyotaTiedotActivity.Talle, 0); //talle on "1", jos tullaan SyotatiedotActivitystä
         if (talle == 0){
-            SharedPreferences loadpreferences = getSharedPreferences(Pref, 0);
-            String json = loadpreferences.getString(Lista, "tyhja");
-            if (!json.equals("tyhja")){
+            SharedPreferences loadpreferences = getSharedPreferences(Pref, 0); //jos tullaan muualta kuin Syotatiedotactivitystä,
+            String json = loadpreferences.getString(Lista, "tyhja");                //ladataan json string sharedpreferenceistä
+            if (!json.equals("tyhja")){                                                 //jos MunkkiList oli jo tyhjä, ei tehdä mitään
                 MunkkiList.getInstance().getMunkit().clear();
-                TypeToken<List<Munkkitiedot>> token = new TypeToken<List<Munkkitiedot>>() {};
+                TypeToken<List<Munkkitiedot>> token = new TypeToken<List<Munkkitiedot>>() {}; //muutetaan json string takaisin MunkkiListaksi
                 ArrayList<Munkkitiedot> alist = gson.fromJson(json, token.getType());
                 for (int i = 0; i < alist.size(); i++) {
                     MunkkiList.getInstance().getMunkit().add(alist.get(i));
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button reset = findViewById(R.id.button_reset);
+        Button reset = findViewById(R.id.button_reset); //reset nappula resetoi tiedot muistista ja sovelluksesta
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        List lista = MunkkiList.getInstance().getMunkit();
+        List lista = MunkkiList.getInstance().getMunkit(); //tallentaa MunkkiListin tiedot sharedpreferenceihin
         if (!lista.isEmpty()){
             String tekst = gson.toJson(lista);
             SharedPreferences talleprefs = getSharedPreferences(Pref, 0);

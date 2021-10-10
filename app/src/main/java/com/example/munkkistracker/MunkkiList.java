@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // singleton luokka munkkilistan tallennukseen
-//Munkkitiedot x = MunkkiList.getInstance().getMunkit().get(indexi) tällä saa yhden munkin listatsta indeksillä indexi
+
 
 public class MunkkiList {
     private List<Munkkitiedot> munkit;

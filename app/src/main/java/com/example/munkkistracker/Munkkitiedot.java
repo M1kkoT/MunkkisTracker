@@ -22,10 +22,10 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         this.cal = kalori;
         this.hinta = cost;
         this.pvm = paiva;
-        ratingslist = new ArrayList<>();
+        ratingslist = new ArrayList<>(); //lista arvosteluista keskiarvon laskemista varten
         ratingslist.add(rating);
         this.arvostelumaara ++;
-        if (tyyppi.equals("Berliininmunkki")){
+        if (tyyppi.equals("Berliininmunkki")){ //katsoo mikä munkki lisättiin myöhempää laskentaa varten
             this.berlin += kappale;
         } else if (tyyppi.equals("Hillomunkki")){
             this.hillo += kappale;
@@ -85,7 +85,7 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
             return ka;
 
         } else {
-            return ratingslist.get(0);
+            return ratingslist.get(0); //jos arvosteluja on vain yksi
         }
     }
 

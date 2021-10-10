@@ -76,7 +76,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         arvostelu.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
-                if (b){
+                if (b){ //katsoo onko käyttäjä arvostellut munkit
                     arvosteltu = true;
                     rating = arvostelu.getRating();
 

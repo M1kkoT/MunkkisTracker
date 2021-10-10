@@ -27,21 +27,21 @@ public class PaivakirjaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_paivakirja);
         ListView lv = findViewById(R.id.lista);
         paivat = new ArrayList<>();
-        for (int i = 0; i < MunkkiList.getInstance().getMunkit().size(); i++){
+        for (int i = 0; i < MunkkiList.getInstance().getMunkit().size(); i++){ //tekee listan päivämääristä
             paivat.add(MunkkiList.getInstance().getMunkit().get(i).getPvm());
         }
 
         lv.setAdapter(new ArrayAdapter<String>( //adapteri listviewille
                 this,
                 android.R.layout.simple_list_item_1,
-                paivat)); //lista päivämääristä jotka on tallennettu PvmListaan
+                paivat)); //lista päivämääristä tulee listviewiin näkyviin
 
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent nextActivity = new Intent(PaivakirjaActivity.this, TietoActivity.class);
-                nextActivity.putExtra(EXTRA, i);
+                nextActivity.putExtra(EXTRA, i); //lisää extrana listview elementin indexin
                 startActivity(nextActivity);
             }
         });
