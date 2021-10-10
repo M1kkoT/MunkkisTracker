@@ -7,14 +7,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
-    private Tallentaja tallentaja = new Tallentaja(this);
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-        tallentaja.Load();
 
         TextView otsikko = findViewById(R.id.info_otsikko);
         otsikko.setText("MunkkiTracker");
@@ -33,9 +32,5 @@ public class InfoActivity extends AppCompatActivity {
         rkuva.setImageResource(R.drawable.ryhma);
 
     }
-    @Override
-    protected void onPause(){
-        super.onPause();
-        tallentaja.Save();
-    }
+
 }

@@ -19,14 +19,12 @@ import java.util.Locale;
 public class PaivakirjaActivity extends AppCompatActivity {
     public static final String EXTRA = "index";
     private ArrayList<String> paivat;
-    private Tallentaja tallentaja = new Tallentaja(this);
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paivakirja);
-        tallentaja.Load();
         ListView lv = findViewById(R.id.lista);
         paivat = new ArrayList<>();
         for (int i = 0; i < MunkkiList.getInstance().getMunkit().size(); i++){
@@ -48,9 +46,5 @@ public class PaivakirjaActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    protected void onPause(){
-        super.onPause();
-        tallentaja.Save();
-    }
+
 }
