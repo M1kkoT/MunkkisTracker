@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class TietoActivity extends AppCompatActivity {
+    private Tallentaja tallentaja = new Tallentaja(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tieto);
+        tallentaja.Load();
         Bundle bundle = getIntent().getExtras(); //testikoodia
         int i = bundle.getInt(PaivakirjaActivity.EXTRA, 0); //i on listan indeksi
 
@@ -54,5 +56,10 @@ public class TietoActivity extends AppCompatActivity {
 
         TextView huom = findViewById(R.id.tieto_huom); //Tätä ei sitten tarvii muokata sen enempää
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        tallentaja.Save();
     }
 }

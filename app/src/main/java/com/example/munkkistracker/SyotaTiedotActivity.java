@@ -23,12 +23,14 @@ import java.util.Locale;
 public class SyotaTiedotActivity extends AppCompatActivity {
     private boolean arvosteltu = false;
     private double rating = 0.0;
+    private Tallentaja tallentaja = new Tallentaja(this);
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syota_tiedot);
+        tallentaja.Load();
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()); //tällä saa päivämäärän
 
 
@@ -149,5 +151,10 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 startActivity(backToMain);
             }
         });
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        tallentaja.Save();
     }
 }

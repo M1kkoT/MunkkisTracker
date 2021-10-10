@@ -8,11 +8,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    private Tallentaja tallentaja = new Tallentaja(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tallentaja.Load();
+
 
         Button tiedot = findViewById(R.id.button_syota_tiedot);  //nappi siirtyy syötä tiedot activityyn
         tiedot.setOnClickListener(new View.OnClickListener() {
@@ -50,4 +54,13 @@ public class MainActivity extends AppCompatActivity {
            }
         });
     }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        tallentaja.Save();
+    }
+
+
+
+
 }

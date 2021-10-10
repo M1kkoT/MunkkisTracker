@@ -9,11 +9,14 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class HallOfFameActivity extends AppCompatActivity {
+    private Tallentaja tallentaja = new Tallentaja(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hall_of_fame);
+        tallentaja.Load();
 
         //Asetetaan TextView
         TextView otsikko = findViewById(R.id.hall_otsikko);
@@ -85,5 +88,10 @@ public class HallOfFameActivity extends AppCompatActivity {
 
         TextView huom = findViewById(R.id.hall_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        tallentaja.Save();
     }
 }
