@@ -87,7 +87,9 @@ public class HallOfFameActivity extends AppCompatActivity {
         ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
 
         TextView arvot = findViewById(R.id.hall_arvot);
-        arvot.setText("Käytit munkkeihin yhteensä "+raha+"€ \nSyömiesi munkkien keskiarvosana on "+ka+" tähteä.");
+        String cash = String.format("%.2f", raha);
+        String average = String.format("%.2f", ka);
+        arvot.setText("Käytit munkkeihin yhteensä "+cash+"€ \nSyömiesi munkkien keskiarvosana on "+average+" tähteä.");
 
         TextView huom = findViewById(R.id.hall_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");

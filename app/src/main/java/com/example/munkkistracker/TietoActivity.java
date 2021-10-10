@@ -40,8 +40,10 @@ public class TietoActivity extends AppCompatActivity {
                 "sokeria "+ MunkkiList.getInstance().getMunkit().get(i).getSugar()+"g");
 
         TextView hinta = findViewById(R.id.tieto_hinta);
-        hinta.setText("Käytit munkkeihin yhteensä " + MunkkiList.getInstance().getMunkit().get(i).getHinta() + " €\n" +
-                "Syömiesi munkkien keskiarvosana on " + MunkkiList.getInstance().getMunkit().get(i).getArvostelu() + " tähteä");
+        String cash = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getHinta());
+        String average = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getArvostelu());
+        hinta.setText("Käytit munkkeihin yhteensä " + cash + " €\n" +
+                "Syömiesi munkkien keskiarvosana on " + average + " tähteä");
 
         TextView huom = findViewById(R.id.tieto_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
