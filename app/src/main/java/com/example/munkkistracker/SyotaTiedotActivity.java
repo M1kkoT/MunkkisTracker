@@ -55,7 +55,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tekst = Integer.toString(MunkkiList.getInstance().getMunkit().size());
                 double testi = Double.parseDouble(tekst);
-                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst, rating, "Berliininmunkki", 2));
+                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst, 2.5, "Berliininmunkki", 2));
 
                 //koodi rajoittamaan listan alkioiden määrää testaukseen
                 if (MunkkiList.getInstance().getMunkit().size() > 5) { // vihda tähän luku kuinka ison listan haluat
