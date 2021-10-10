@@ -18,20 +18,24 @@ import java.util.Locale;
 
 public class PaivakirjaActivity extends AppCompatActivity {
     public static final String EXTRA = "index";
+    private ArrayList<String> paivat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paivakirja);
         ListView lv = findViewById(R.id.lista);
-
+        paivat = new ArrayList<>();
+        for (int i = 0; i < MunkkiList.getInstance().getMunkit().size(); i++){
+            paivat.add(MunkkiList.getInstance().getMunkit().get(i).getPvm());
+        }
 
 
 
         lv.setAdapter(new ArrayAdapter<String>( //adapteri listviewille
                 this,
                 android.R.layout.simple_list_item_1,
-                PvmList.getInstance().getPvm())); //lista päivämääristä jotka on tallennettu PvmListaan
+                paivat)); //lista päivämääristä jotka on tallennettu PvmListaan
 
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

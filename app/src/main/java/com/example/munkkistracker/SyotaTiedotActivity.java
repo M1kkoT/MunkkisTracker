@@ -54,14 +54,13 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         testi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PvmList.getInstance().getPvm().add(date + PvmList.getInstance().getPvm().size());
                 String tekst = Integer.toString(MunkkiList.getInstance().getMunkit().size());
                 double testi = Double.parseDouble(tekst);
                 MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, tekst, rating, "Berliininmunkki", 2));
 
                 //koodi rajoittamaan listan alkioiden määrää testaukseen
-                if (PvmList.getInstance().getPvm().size() > 5) { // vihda tähän luku kuinka ison listan haluat
-                    PvmList.getInstance().getPvm().remove(0);
+                if (MunkkiList.getInstance().getMunkit().size() > 5) { // vihda tähän luku kuinka ison listan haluat
+
                     MunkkiList.getInstance().getMunkit().remove(0);
                 }
 
@@ -94,11 +93,11 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         tallenna.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int koko = PvmList.getInstance().getPvm().size(); //tallennettujen tietojen listan koko
+                int koko = MunkkiList.getInstance().getMunkit().size(); //tallennettujen tietojen listan koko
                 boolean totuus = false; //false niin pvm ei ole jo listalla, true niin on
                 if (koko > 0){
                     for (int i = 0; i < koko ; i++){ //for looppi käy läpi pvmlistan ja vaihtaa totuuden arvoon "true" jos nykyinen pvm on jo listalla
-                        String pvm = PvmList.getInstance().getPaiva(i);
+                        String pvm = MunkkiList.getInstance().getMunkit().get(i).getPvm();
                         if (pvm.equals(date)){
                             totuus = true;
                         }
@@ -147,23 +146,21 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 double cost = Double.parseDouble(hinta.getText().toString());//ottaa hinnan syötteestä
                 Counter counter = new Counter(b, cost, kpl); //luodaan counter
 
-                if (!totuus){
-                    PvmList.getInstance().getPvm().add(date); //lisätään pvm singleton luokkaan jos se ei ole vielä
+                if (!totuus){  //lisätään tiedot singleton luokkaan jos tältä päivältä ei ole tietoja vielä
                     MunkkiList.getInstance().getMunkit().add(new Munkkitiedot(counter.getFat(), counter.getSugar(),
                             counter.getKcal(), counter.getCost(), date, rating, b.toString(), kpl)); //lisää tiedot singleton luokkkaan
                 }
                 else{
-                    Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota
+                    Munkkitiedot munkki = MunkkiList.getInstance().getMunkit().get(MunkkiList.getInstance().getMunkit().size() - 1); //muokkaa viimeistä alkiota jos tältä päivältä on jo tietoja
                     munkki.setCal(munkki.getCal() + counter.getKcal());  //lisätään uudet arvot vanhoihin
                     munkki.setFat(munkki.getFat() + counter.getFat());
                     munkki.setSugar(munkki.getSugar() + counter.getSugar());
                     munkki.setHinta(munkki.getHinta() + counter.getCost());
-                    munkki.setArvostelu(rating);
+                    munkki.setArvostelu(rating); // arvostelut tallentuvat päiväkohtaisesti listaan ja näin saadaan laskettua keskiarvo jos päivältä tulee useita arvosteluja
                     munkki.addMunkkiKpl(b.toString(), kpl);
 
                 }
-                if (PvmList.getInstance().getPvm().size() > 30){ //pitää listoissa maksimissaan 30 alkiota
-                    PvmList.getInstance().getPvm().remove(0);
+                if (MunkkiList.getInstance().getMunkit().size() > 30){ //pitää listassa maksimissaan 30 alkiota
                     MunkkiList.getInstance().getMunkit().remove(0);
                 }
 
