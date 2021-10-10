@@ -30,8 +30,6 @@ public class PaivakirjaActivity extends AppCompatActivity {
             paivat.add(MunkkiList.getInstance().getMunkit().get(i).getPvm());
         }
 
-
-
         lv.setAdapter(new ArrayAdapter<String>( //adapteri listviewille
                 this,
                 android.R.layout.simple_list_item_1,
@@ -46,7 +44,5 @@ public class PaivakirjaActivity extends AppCompatActivity {
                 startActivity(nextActivity);
             }
         });
-
     }
-
 }

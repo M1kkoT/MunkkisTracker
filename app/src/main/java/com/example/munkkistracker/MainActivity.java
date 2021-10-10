@@ -20,27 +20,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SyotaTiedotActivity.class);
                 startActivity(intent);
-
             }
         });
+
         Button diary = findViewById(R.id.button_paivakirja); //nappi siirtyy päiväkirjaactivityyn
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(MainActivity.this, PaivakirjaActivity.class);
                 startActivity(intent2);
-
             }
         });
+
         Button fame = findViewById(R.id.button_halloffame);  //nappi siirtyy hall of fame activityyn
         fame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent3 = new Intent(MainActivity.this, HallOfFameActivity.class);
                 startActivity(intent3);
-
             }
         });
+
         Button info = findViewById(R.id.button5); //Nappi siirtää Info-Activityyn
         info.setOnClickListener(new View.OnClickListener(){
            @Override
@@ -49,10 +49,5 @@ public class MainActivity extends AppCompatActivity {
                startActivity(intent5);
            }
         });
-
-
-
-
-
     }
 }

@@ -9,8 +9,8 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="349dp"
-        android:layout_height="165dp"
+        android:layout_width="347dp"
+        android:layout_height="146dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:background="#B67142"
@@ -23,27 +23,30 @@
             android:id="@+id/rb_Berlin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rb_berlin" />
+            android:text="@string/rb_berlin"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/rb_Hillo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rb_hillo" />
+            android:text="@string/rb_hillo"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/rb_rinkila"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/rb_rinkila" />
+            android:text="@string/rb_rinkila"
+            android:textSize="16sp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/tv_maara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
@@ -55,7 +58,7 @@
         android:id="@+id/tv_hinta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
         android:scaleX="2"
         android:scaleY="2"
@@ -64,7 +67,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_maara"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.911" />
 
     <Button
         android:id="@+id/button_tallenna"
@@ -97,27 +100,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toEndOf="@+id/tv_maara"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
         android:id="@+id/editTextHinta"
-        android:layout_width="wrap_content"
+        android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.696"
         app:layout_constraintStart_toEndOf="@+id/tv_hinta"
         app:layout_constraintTop_toBottomOf="@+id/editText_maara"
         app:layout_constraintVertical_bias="1.0" />
