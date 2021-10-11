@@ -24,7 +24,7 @@ public class TietoActivity extends AppCompatActivity {
         double kokoluku = (MunkkiList.getInstance().getMunkit().get(i).getHillo()) + (MunkkiList.getInstance().getMunkit().get(i).getBerlin()) + (MunkkiList.getInstance().getMunkit().get(i).getRinkila());
 
         TextView maara = findViewById(R.id.tieto_maara);
-        maara.setText("Olet syönyt yhteensä "+kokoluku+" munkkia.\n ");
+        maara.setText("Olet syönyt yhteensä "+kokoluku+" munkkia. ");
 
         TextView ber = findViewById(R.id.tieto_munkit);
         ber.setText("Berliininmunkkeja "+ (MunkkiList.getInstance().getMunkit().get(i).getBerlin())+
@@ -43,7 +43,7 @@ public class TietoActivity extends AppCompatActivity {
         String cash = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getHinta());
         String average = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getArvostelu());
         hinta.setText("Käytit munkkeihin yhteensä " + cash + " €\n" +
-                "Syömiesi munkkien keskiarvosana on " + average + " tähteä");
+                "Munkkien keskiarvosana on " + average + " ★");
 
         TextView huom = findViewById(R.id.tieto_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
