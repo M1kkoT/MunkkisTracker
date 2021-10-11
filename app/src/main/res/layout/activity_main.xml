@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/button_syota_tiedot"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="57dp"
         android:layout_marginTop="56dp"
         android:backgroundTint="#B67142"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/button_paivakirja"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="57dp"
         android:backgroundTint="#B67142"
         android:gravity="center"
@@ -36,7 +36,7 @@
 
     <Button
         android:id="@+id/button_halloffame"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="57dp"
         android:layout_marginBottom="256dp"
         android:backgroundTint="#B67142"
