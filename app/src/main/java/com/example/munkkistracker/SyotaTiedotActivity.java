@@ -145,7 +145,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     munkki.setFat(munkki.getFat() + counter.getFat());
                     munkki.setSugar(munkki.getSugar() + counter.getSugar());
                     munkki.setHinta(munkki.getHinta() + counter.getCost());
-                    munkki.setArvostelu(rating); // arvostelut tallentuvat päiväkohtaisesti listaan ja näin saadaan laskettua keskiarvo jos päivältä tulee useita arvosteluja
+                    munkki.addArvostelu(rating); // arvostelut tallentuvat päiväkohtaisesti listaan ja näin saadaan laskettua keskiarvo jos päivältä tulee useita arvosteluja
                     munkki.addMunkkiKpl(b.toString(), kpl);
 
                 }
