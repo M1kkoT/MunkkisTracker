@@ -5,7 +5,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-// singleton luokka munkkilistan tallennukseen
+/**
+ * singleton luokka tietojen tallennukseen
+ * tiedot tallennetaan listaan Munkkitiedot-olioina
+ *
+ */
 
 
 public class MunkkiList {
@@ -24,8 +28,6 @@ public class MunkkiList {
         return munkit;
     }
 
-    public Munkkitiedot getMunkkiTiedot(int luku){ //tällä saa yhden munkin listasta indeksillä luku
-        return munkit.get(luku);
-    }
+
 
 }

@@ -1,5 +1,23 @@
 package com.example.munkkistracker;
 
+
+/**
+ * Laskija-luokka laskutoimituksille
+ * viisi luokkamuuttujaa , hinnalle, kaloreille, rasvalle, sokerille ja kappalemäärälle
+ * konstruktori
+ * @param munkki Munkki-rajapinnan toteuttava olio
+ * @param hinta munkkien hinta
+ * @param lukum munkkien lukumäärä
+ * metodit
+ * getCost()
+ * @return palauttaa kokonaishinnan (hinta * kappalemäärä)
+ * getKcal()
+ * @return palauttaa kalorimäärän (kalorimäärä * kappalemäärä)
+ * getfat()
+ *
+ *
+ */
+
 public class Counter {
     private double cost;
     private int kcal;
