@@ -1,9 +1,12 @@
 package com.example.munkkistracker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -58,10 +61,13 @@ public class HallOfFameActivity extends AppCompatActivity {
 
         }
 
-        //Vaihtaa kuvaa sen mukaan mitä munkkia on eniten
+        //Vaihtaa kuvaa ja taustaväriä sen mukaan mitä munkkia on eniten
+        ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.br_test);
+
         ImageView winner = findViewById(R.id.image_winner);
         if (berlm > hillom && berlm > rinkelim){
             winner.setImageResource(R.drawable.winner_ber);
+            bgElement.setBackgroundColor(Color.rgb(255, 105, 180));
         }else if(hillom > berlm && hillom > rinkelim){
             winner.setImageResource(R.drawable.winner_hillo);
         }else if (rinkelim > berlm && rinkelim > hillom){
@@ -81,10 +87,10 @@ public class HallOfFameActivity extends AppCompatActivity {
         vali.setText("Viimeisen 30 merkinnän yhteenveto");
 
         TextView munkit = findViewById(R.id.hall_munkit);
-        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+"\nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
+        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+"g \nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
 
         TextView ravinto = findViewById(R.id.hall_ravinto);
-        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
+        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+" \nsokeria "+sokeri+"g");
 
         TextView arvot = findViewById(R.id.hall_arvot);
         String cash = String.format("%.2f", raha); //muokkaa hinnat ja tähdet tulostettaviksi vain 2 desimaalin tarkkuudella
