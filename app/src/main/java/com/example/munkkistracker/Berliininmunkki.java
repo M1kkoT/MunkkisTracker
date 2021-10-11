@@ -1,7 +1,19 @@
 package com.example.munkkistracker;
 
 /**
- * sara
+ * Berliininmunkki-luokka toteuttaa rajapinnan Munkki
+ * Konstruktori
+ * asettaa arvot berliininmunkin oliomuuttujille (fat, sugar, cal)
+ *
+ * metodit
+ * getRasva()
+ * @return palauttaa berliininmunkin oliomuuttujan rasva (fat) arvon (15)
+ * getKcal()
+ * @return palauttaa berliininmunkin oliomuuttujan kalori (kcl) arvon (405)
+ * getSokeri()
+ * @return palauttaa berliininmunkin oliomuuttujan sokekeri (sugar) arvon (36)
+ * toString
+ * @return palauttaa String "Berliininmunkki"
  */
 
 public class Berliininmunkki implements Munkki{ //luokka berliininmunkin tiedoille
