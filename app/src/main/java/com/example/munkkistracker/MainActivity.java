@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
                     MunkkiList.getInstance().getMunkit().add(alist.get(i));
                 }
             }
+        } if(talle == 2) {
+            MunkkiList.getInstance().getMunkit().clear();
+            SharedPreferences sharedPreferences = getSharedPreferences(Pref,0);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.commit();
         }
 
 
@@ -51,17 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button reset = findViewById(R.id.button_reset); //reset nappula resetoi tiedot muistista ja sovelluksesta
-        reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MunkkiList.getInstance().getMunkit().clear();
-                SharedPreferences sharedPreferences = getSharedPreferences(Pref,0);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.clear();
-                editor.commit();
-            }
-        });
+
 
 
 

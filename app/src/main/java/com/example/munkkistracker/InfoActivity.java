@@ -2,6 +2,7 @@ package com.example.munkkistracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -39,8 +40,9 @@ public class InfoActivity extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MunkkiList.getInstance().getMunkit().clear();
-
+                Intent backToMain = new Intent(InfoActivity.this, MainActivity.class); //palaa mainactivityyn
+                backToMain.putExtra("talle", 2);
+                startActivity(backToMain);
             }
         });
     }
