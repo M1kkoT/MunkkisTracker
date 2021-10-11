@@ -1,5 +1,9 @@
 package com.example.munkkistracker;
 
+/**
+ * Sara
+ */
+
 public class Munkkirinkila implements Munkki{ //luokka munkkirinkilän tiedoille
     private double fat;
     private double sugar;
