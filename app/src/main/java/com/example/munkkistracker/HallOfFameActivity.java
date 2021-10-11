@@ -87,15 +87,15 @@ public class HallOfFameActivity extends AppCompatActivity {
         vali.setText("Viimeisen 30 merkinnän yhteenveto");
 
         TextView munkit = findViewById(R.id.hall_munkit);
-        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+"g \nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
+        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+" \nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
 
         TextView ravinto = findViewById(R.id.hall_ravinto);
-        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+" \nsokeria "+sokeri+"g");
+        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
 
         TextView arvot = findViewById(R.id.hall_arvot);
         String cash = String.format("%.2f", raha); //muokkaa hinnat ja tähdet tulostettaviksi vain 2 desimaalin tarkkuudella
         String average = String.format("%.2f", ka);
-        arvot.setText("Käytit munkkeihin yhteensä "+cash+"€ \nSyömiesi munkkien keskiarvosana on "+average+" tähteä.");
+        arvot.setText("Käytit munkkeihin yhteensä "+cash+"€ \nMunkkien keskiarvosana on "+average+" ★");
 
         TextView huom = findViewById(R.id.hall_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");

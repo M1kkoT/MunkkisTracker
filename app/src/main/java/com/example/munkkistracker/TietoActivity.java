@@ -43,7 +43,7 @@ public class TietoActivity extends AppCompatActivity {
         String cash = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getHinta());
         String average = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getArvostelu());
         hinta.setText("Käytit munkkeihin yhteensä " + cash + " €\n" +
-                "Syömiesi munkkien keskiarvosana on " + average + " tähteä");
+                "Munkkien keskiarvosana on " + average + " ★");
 
         TextView huom = findViewById(R.id.tieto_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
