@@ -24,7 +24,7 @@ public class TietoActivity extends AppCompatActivity {
         double kokoluku = (MunkkiList.getInstance().getMunkit().get(i).getHillo()) + (MunkkiList.getInstance().getMunkit().get(i).getBerlin()) + (MunkkiList.getInstance().getMunkit().get(i).getRinkila());
 
         TextView maara = findViewById(R.id.tieto_maara);
-        maara.setText("Olet syönyt yhteensä "+kokoluku+" munkkia.\n ");
+        maara.setText("Olet syönyt yhteensä "+kokoluku+" munkkia. ");
 
         TextView ber = findViewById(R.id.tieto_munkit);
         ber.setText("Berliininmunkkeja "+ (MunkkiList.getInstance().getMunkit().get(i).getBerlin())+
