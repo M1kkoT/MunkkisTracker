@@ -28,9 +28,10 @@ import java.util.List;
  * onCreate()
  * aluksi koodi katsoo, kutsutaanko onCreate() metodia painamalla tallenna nappia SyotatiedotActivityssä
  * jos kutsutaan, niin ei tarvitse ladata tietoja sharedpreferenceistä
- *          -tämä tapahtuu tarkistamalla saadaanko Syötätiedotactivitystä "Extra"
- * jos tullaan muualta kuin Syotatiedotactivitystä, ladataan json string sharedpreferenceistä
+ *          -tämä tapahtuu tarkistamalla saadaanko Syötätiedotactivitystä "Extra" (talle == 1)
+ * jos tullaan muualta kuin Syotatiedotactivitystä (talle == 0), ladataan json string sharedpreferenceistä
  * jos json string oli jo tyhjä, ei tehdä mitään, jos ei niin muutetaan json string takaisin MunkkiListaksi
+ * jos tullaan reset nappulasta (talle == 2)
  *
  *
  */
