@@ -1,9 +1,12 @@
 package com.example.munkkistracker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -58,10 +61,13 @@ public class HallOfFameActivity extends AppCompatActivity {
 
         }
 
-        //Vaihtaa kuvaa sen mukaan mitä munkkia on eniten
+        //Vaihtaa kuvaa ja taustaväriä sen mukaan mitä munkkia on eniten
+        ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.br_test);
+
         ImageView winner = findViewById(R.id.image_winner);
         if (berlm > hillom && berlm > rinkelim){
             winner.setImageResource(R.drawable.winner_ber);
+            bgElement.setBackgroundColor(Color.rgb(255, 105, 180));
         }else if(hillom > berlm && hillom > rinkelim){
             winner.setImageResource(R.drawable.winner_hillo);
         }else if (rinkelim > berlm && rinkelim > hillom){
