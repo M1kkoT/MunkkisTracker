@@ -1,7 +1,23 @@
 package com.example.munkkistracker;
 
 /**
- * Sara
+ * @author Sara Oksanen
+ * HallOfFameactivity kerää kokoon viimeisen 30 päivän tiedot mitkä käyttäjä on syöttänyt
+ * ja näyttää niiden arvot TextView näkymissä
+ *
+ * Alustetaan ja asetetaan arvot myöhemmin tarvittaville muuttujille
+ *
+ * Luodaan for-looppi
+ * joka käy läpi arraylistin, mihin on kerätty kaikki munkkitiedot ja summaa
+ * saadut luvut yhteen
+ *
+ * Luodaan if-lauseke
+ * lauseke katsoo mitä munkkia/munkkeja on syöty eniten ja asettaa sen mukaan ImageView näkymään kuvan
+ * setImageresource komennolla ja vaihtaa taustaväriä setBackroundColor komennolla
+ *
+ * TextView.setText
+ * Asetetaan tekstit textView näkymiin käyttämällä String ja aiemmin alustettuja muuttujia.
+ *
  */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,14 +39,7 @@ public class HallOfFameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hall_of_fame);
 
-        //Asetetaan TextView
-        TextView otsikko = findViewById(R.id.hall_otsikko);
-        otsikko.setText("Hall Of Fame");
-
-        TextView win = findViewById(R.id.hall_winner);
-        win.setText("WINNER");
-
-        //Tarvittavat arvot
+        //Tarvittavat muuttujat
         double rinkelim = 0;
         double berlm = 0;
         double hillom = 0;
@@ -62,13 +71,12 @@ public class HallOfFameActivity extends AppCompatActivity {
             arvosana += MunkkiList.getInstance().getMunkit().get(i).getArvostelu();
             paivat++;
             ka = arvosana/paivat;
-
         }
 
         //Vaihtaa kuvaa ja taustaväriä sen mukaan mitä munkkia on eniten
         ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.br_test);
-
         ImageView winner = findViewById(R.id.image_winner);
+
         if (berlm > hillom && berlm > rinkelim){
             winner.setImageResource(R.drawable.winner_ber);
             bgElement.setBackgroundColor(Color.rgb(255, 105, 180));
@@ -87,6 +95,12 @@ public class HallOfFameActivity extends AppCompatActivity {
         }
 
         //TextView asettelu
+        TextView otsikko = findViewById(R.id.hall_otsikko);
+        otsikko.setText("Hall Of Fame");
+
+        TextView win = findViewById(R.id.hall_winner);
+        win.setText("WINNER");
+
         TextView vali = findViewById(R.id.hall_vali);
         vali.setText("Viimeisen 30 merkinnän yhteenveto");
 
