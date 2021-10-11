@@ -1,5 +1,22 @@
 package com.example.munkkistracker;
 
+/**
+ * Hillomunkki-luokka toteuttaa rajapintaluokan Munkki
+ * Konstruktori
+ * asettaa arvot hillomunkin olimuuttujille (fat, sugar, cal)
+ *
+ * metodit
+ * getRasva()
+ * @return palauttaa hillomunkin oliomuuttujan rasva (fat) arvon (9)
+ * getKcal()
+ * @return palauttaa hillomunkin oliomuuttujan kalori (cal) arvon (241)
+ * getSokeri()
+ * @return palauttaa hillomunkin oliomuuttujan sokeri (sugar) arvon (16)
+ * toString()
+ * @return palauttaa String tekstin "Hillomunkki"
+ *
+ */
+
 public class Hillomunkki implements Munkki { //luokka hillomunkin tiedoille
     private double fat;
     private double sugar;
