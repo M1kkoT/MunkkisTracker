@@ -35,9 +35,9 @@ public class TietoActivity extends AppCompatActivity {
         valiotsikko.setText("Niissä on ollut yhteensä:");
 
         TextView kalori = findViewById(R.id.tieto_ravinto);
-        kalori.setText("Kaloreita "+MunkkiList.getInstance().getMunkit().get(i).getCal()+"kcl\n" +
-                "rasvaa "+ MunkkiList.getInstance().getMunkit().get(i).getFat()+"g\n" +
-                "sokeria "+ MunkkiList.getInstance().getMunkit().get(i).getSugar()+"g");
+        kalori.setText("Kaloreita "+MunkkiList.getInstance().getMunkit().get(i).getCal()+" kcl\n" +
+                "rasvaa "+ MunkkiList.getInstance().getMunkit().get(i).getFat()+" g\n" +
+                "sokeria "+ MunkkiList.getInstance().getMunkit().get(i).getSugar()+" g");
 
         TextView hinta = findViewById(R.id.tieto_hinta);
         String cash = String.format("%.2f", MunkkiList.getInstance().getMunkit().get(i).getHinta());

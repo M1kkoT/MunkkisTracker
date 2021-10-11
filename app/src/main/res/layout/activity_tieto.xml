@@ -11,7 +11,7 @@
         android:id="@+id/tieto_maara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -31,57 +31,69 @@
         android:id="@+id/tieto_ravinto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/tieto_vali"
-        tools:layout_editor_absoluteX="177dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_vali" />
 
     <TextView
         android:id="@+id/tieto_hinta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tieto_ravinto"
-        tools:layout_editor_absoluteX="177dp" />
+        app:layout_constraintVertical_bias="0.505" />
 
     <TextView
         android:id="@+id/tieto_pvm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="32dp" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tieto_vali"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/tieto_munkit"
-        tools:layout_editor_absoluteX="178dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_munkit" />
 
     <TextView
         android:id="@+id/tieto_munkit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/tieto_maara"
-        tools:layout_editor_absoluteX="175dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tieto_maara" />
 
     <TextView
         android:id="@+id/tieto_huom"
