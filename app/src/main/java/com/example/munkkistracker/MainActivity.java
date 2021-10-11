@@ -31,7 +31,22 @@ import java.util.List;
  *          -tämä tapahtuu tarkistamalla saadaanko Syötätiedotactivitystä "Extra" (talle == 1)
  * jos tullaan muualta kuin Syotatiedotactivitystä (talle == 0), ladataan json string sharedpreferenceistä
  * jos json string oli jo tyhjä, ei tehdä mitään, jos ei niin muutetaan json string takaisin MunkkiListaksi
- * jos tullaan reset nappulasta (talle == 2)
+ * jos tullaan reset nappulasta (talle == 2), tyhjennetään sharedpreferences ja Munkkilist
+ *
+ * Button tiedot
+ * siirtyy SyötäTiedotActivityyn
+ *
+ * Button diary
+ * siirtyy PäiväkirjaActivityyn
+ *
+ * Button fame
+ * siirtyy HallOfFameActivityyn
+ *
+ * Button info
+ * siirtyy InfoActivityyn
+ *
+ * onPause()
+ * muuttaa Munkkilist singleton luokassa olevan listan json stringiksi ja tallentaa sen sharedpreferenceihin
  *
  *
  */
