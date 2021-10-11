@@ -10,9 +10,10 @@
     <Button
         android:id="@+id/button_syota_tiedot"
         android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#B67142"
+        android:gravity="center"
         android:text="@string/nappi1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,22 +23,24 @@
     <Button
         android:id="@+id/button_paivakirja"
         android:layout_width="410dp"
-        android:layout_height="60dp"
+        android:layout_height="57dp"
         android:backgroundTint="#B67142"
+        android:gravity="center"
         android:text="@string/nappi2"
         app:layout_constraintBottom_toTopOf="@+id/button_halloffame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_syota_tiedot"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintVertical_bias="0.517" />
 
     <Button
         android:id="@+id/button_halloffame"
         android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="236dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="256dp"
         android:backgroundTint="#B67142"
+        android:gravity="center"
         android:text="@string/nappi3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,9 +49,9 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="411dp"
+        android:layout_width="425dp"
         android:layout_height="60dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="76dp"
         android:background="#B67142"
         android:fontFamily="@font/fascinate_inline"
         android:text="@string/title"
@@ -56,14 +59,15 @@
         android:textColor="#FFFFFF"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="147dp"
-        android:layout_height="53dp"
+        android:layout_width="129dp"
+        android:layout_height="55dp"
         android:backgroundTint="#B67142"
         android:shape="ring"
         android:text="@string/nappi_tekijat"
@@ -71,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_halloffame"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintVertical_bias="0.194" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -84,11 +88,4 @@
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintVertical_bias="0.515"
         app:srcCompat="@drawable/munkki3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="205dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

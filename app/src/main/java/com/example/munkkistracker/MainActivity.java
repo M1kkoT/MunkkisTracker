@@ -14,6 +14,43 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Ohjelman MainActivity toimii ohjelman keskeisenä Activitynä
+ * MainActivityssä on 4 nappia, joilla pääsee
+ * syötäTiedotActivityyn, PäiväkirjaActivityyn, HallOfFameActivityyn ja InfoActivityyn
+ * MainActivityssä tapahtuu tietojen tallennus gsonin avulla
+ *
+ * 3 luokkamuuttujaa
+ * Gson luokan olia gson - käytetään tiedon tallentamiseen json-stringinä
+ * String Pref - käytetään ohjelmassa käytetyn sharedprefrerencen nimenä
+ * String Lista - sharedpreferenceseihin tallennetun json stringin nimi
+ *
+ * onCreate()
+ * aluksi koodi katsoo, kutsutaanko onCreate() metodia painamalla tallenna nappia SyotatiedotActivityssä
+ * jos kutsutaan, niin ei tarvitse ladata tietoja sharedpreferenceistä
+ *          -tämä tapahtuu tarkistamalla saadaanko Syötätiedotactivitystä "Extra" (talle == 1)
+ * jos tullaan muualta kuin Syotatiedotactivitystä (talle == 0), ladataan json string sharedpreferenceistä
+ * jos json string oli jo tyhjä, ei tehdä mitään, jos ei niin muutetaan json string takaisin MunkkiListaksi
+ * jos tullaan reset nappulasta (talle == 2), tyhjennetään sharedpreferences ja Munkkilist
+ *
+ * Button tiedot
+ * siirtyy SyötäTiedotActivityyn
+ *
+ * Button diary
+ * siirtyy PäiväkirjaActivityyn
+ *
+ * Button fame
+ * siirtyy HallOfFameActivityyn
+ *
+ * Button info
+ * siirtyy InfoActivityyn
+ *
+ * onPause()
+ * muuttaa Munkkilist singleton luokassa olevan listan json stringiksi ja tallentaa sen sharedpreferenceihin
+ *
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
     private Gson gson;
     private static final String  Pref = "talle"; //sharedpreferences munkkilistan nimi
