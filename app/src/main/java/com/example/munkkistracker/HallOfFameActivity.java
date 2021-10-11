@@ -81,10 +81,10 @@ public class HallOfFameActivity extends AppCompatActivity {
         vali.setText("Viimeisen 30 merkinnän yhteenveto");
 
         TextView munkit = findViewById(R.id.hall_munkit);
-        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+"\nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
+        munkit.setText("Olet yhteensä syönyt "+kaikki+" munkkia. \nBerliininmunkkeja "+berlm+"g \nHillomunkkeja "+hillom+"\nMunkkirinkeleitä "+rinkelim);
 
         TextView ravinto = findViewById(R.id.hall_ravinto);
-        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+"g \nsokeria "+sokeri+"g");
+        ravinto.setText("Niissä on ollut yhteensä:\nkaloreita "+ kalori + "kcl \nrasvaa "+rasva+" \nsokeria "+sokeri+"g");
 
         TextView arvot = findViewById(R.id.hall_arvot);
         String cash = String.format("%.2f", raha); //muokkaa hinnat ja tähdet tulostettaviksi vain 2 desimaalin tarkkuudella
