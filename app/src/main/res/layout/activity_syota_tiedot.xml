@@ -23,7 +23,7 @@
             android:id="@+id/rb_Berlin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/archivo_black"
+            android:fontFamily="sans-serif"
             android:text="@string/rb_berlin"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -32,7 +32,7 @@
             android:id="@+id/rb_Hillo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/archivo_black"
+            android:fontFamily="sans-serif"
             android:text="@string/rb_hillo"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -41,7 +41,7 @@
             android:id="@+id/rb_rinkila"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/archivo_black"
+            android:fontFamily="sans-serif"
             android:text="@string/rb_rinkila"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="sans-serif-medium"
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="sans-serif-medium"
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
@@ -107,26 +107,26 @@
 
     <EditText
         android:id="@+id/editText_maara"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="sans-serif"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toEndOf="@+id/tv_maara"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
         android:id="@+id/editTextHinta"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:fontFamily="@font/archivo_black"
         android:inputType="numberDecimal"
@@ -134,10 +134,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toEndOf="@+id/tv_hinta"
         app:layout_constraintTop_toBottomOf="@+id/editText_maara"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.966" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -180,7 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:fontFamily="@font/archivo_black"
+        android:fontFamily="sans-serif-medium"
         android:scaleX="2"
         android:scaleY="2"
         android:text="TextView"
