@@ -9,19 +9,24 @@
 
     <ImageView
         android:id="@+id/imgRyhma"
-        android:layout_width="409dp"
-        android:layout_height="235dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="412dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/info_otsikko"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <TextView
         android:id="@+id/info_otsikko"
         android:layout_width="175dp"
         android:layout_height="25dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:background="#B67142"
         android:fontFamily="@font/fascinate_inline"
         android:gravity="center"
@@ -29,10 +34,10 @@
         android:scaleY="2.5"
         android:text="TextView"
         android:textColor="#FFFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/info_aloitus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgRyhma" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -46,13 +51,15 @@
         android:id="@+id/info_aloitus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/archivo_black"
+        android:gravity="center"
         android:scaleX="1.5"
         android:scaleY="1.5"
         android:text="TextView"
-        android:gravity="center"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/info_nimet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/info_otsikko" />
@@ -61,7 +68,8 @@
         android:id="@+id/info_nimet"
         android:layout_width="252dp"
         android:layout_height="82dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="44dp"
         android:background="#B67142"
         android:fontFamily="@font/archivo_black"
         android:gravity="center"
@@ -69,7 +77,9 @@
         android:scaleY="2"
         android:text="TextView"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/info_koulu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/info_aloitus" />
 
@@ -77,13 +87,15 @@
         android:id="@+id/info_koulu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/archivo_black"
+        android:gravity="center"
         android:scaleX="1.5"
         android:scaleY="1.5"
         android:text="TextView"
-        android:gravity="center"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/info_nimet" />
