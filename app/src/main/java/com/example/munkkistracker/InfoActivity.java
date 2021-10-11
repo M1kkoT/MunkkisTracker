@@ -2,7 +2,11 @@ package com.example.munkkistracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +35,19 @@ public class InfoActivity extends AppCompatActivity {
         ImageView rkuva = findViewById(R.id.imgRyhma);
         rkuva.setImageResource(R.drawable.ryhma);
 
+
+        Button reset = findViewById(R.id.resetBtn);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backToMain = new Intent(InfoActivity.this, MainActivity.class); //palaa mainactivityyn
+                backToMain.putExtra("talle", 2);
+                startActivity(backToMain);
+            }
+        });
     }
+
+
+
 
 }
