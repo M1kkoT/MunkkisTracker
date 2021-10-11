@@ -11,10 +11,11 @@
         android:id="@+id/button_syota_tiedot"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#B67142"
         android:text="@string/nappi1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -26,19 +27,21 @@
         android:text="@string/nappi2"
         app:layout_constraintBottom_toTopOf="@+id/button_halloffame"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_syota_tiedot" />
+        app:layout_constraintTop_toBottomOf="@+id/button_syota_tiedot"
+        app:layout_constraintVertical_bias="0.434" />
 
     <Button
         android:id="@+id/button_halloffame"
         android:layout_width="416dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="248dp"
+        android:layout_marginBottom="328dp"
         android:backgroundTint="#B67142"
         android:text="@string/nappi3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -68,7 +71,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_halloffame" />
+        app:layout_constraintTop_toBottomOf="@+id/button_halloffame"
+        app:layout_constraintVertical_bias="0.114" />
 
     <Button
         android:id="@+id/button_reset"
@@ -81,4 +85,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.123"
+        app:srcCompat="@drawable/munkki3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
