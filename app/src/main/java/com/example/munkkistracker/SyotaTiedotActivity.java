@@ -126,6 +126,12 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     toast.show();
                     return;
                 }
+                if (volume.getText().toString().equals("0")){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Kappalemäärä ei voi olla 0!", Toast.LENGTH_LONG); //ilmoitus jos käyttäjä syöttää kappalemääräksi "0"
+                    toast.show();
+                    return;
+
+                }
                 if (!arvosteltu){
                     Toast toast = Toast.makeText(getApplicationContext(), "Arvostele munkit!", Toast.LENGTH_LONG); //pyytää käyttäjää arvostelemaan munkit
                     toast.show();
