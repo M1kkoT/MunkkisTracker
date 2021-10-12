@@ -8,28 +8,16 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_syota_tiedot"
-        android:layout_width="410dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#B67142"
-        android:gravity="center"
-        android:text="@string/nappi1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
-
-    <Button
         android:id="@+id/button_paivakirja"
         android:layout_width="410dp"
         android:layout_height="57dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
         android:backgroundTint="#B67142"
         android:gravity="center"
         android:text="@string/nappi2"
         app:layout_constraintBottom_toTopOf="@+id/button_halloffame"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_syota_tiedot"
         app:layout_constraintVertical_bias="0.517" />
@@ -38,13 +26,14 @@
         android:id="@+id/button_halloffame"
         android:layout_width="410dp"
         android:layout_height="57dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
         android:layout_marginBottom="256dp"
         android:backgroundTint="#B67142"
         android:gravity="center"
         android:text="@string/nappi3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -88,4 +77,18 @@
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintVertical_bias="0.515"
         app:srcCompat="@drawable/munkki3" />
+
+    <Button
+        android:id="@+id/button_syota_tiedot"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="2dp"
+        android:backgroundTint="#B67142"
+        android:gravity="center"
+        android:text="@string/nappi1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
