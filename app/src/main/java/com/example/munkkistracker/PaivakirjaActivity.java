@@ -17,6 +17,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ *
+ */
+
 public class PaivakirjaActivity extends AppCompatActivity {
     public static final String EXTRA = "index";
     private ArrayList<String> paivat;

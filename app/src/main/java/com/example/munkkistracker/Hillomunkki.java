@@ -1,6 +1,7 @@
 package com.example.munkkistracker;
 
 /**
+ *
  * Hillomunkki-luokka toteuttaa rajapintaluokan Munkki
  * Konstruktori
  * asettaa arvot hillomunkin olimuuttujille (fat, sugar, cal)

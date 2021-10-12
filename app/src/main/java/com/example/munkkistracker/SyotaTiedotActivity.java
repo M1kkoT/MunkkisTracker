@@ -23,6 +23,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * @author Mikko Tanhola
+ */
+
 public class SyotaTiedotActivity extends AppCompatActivity {
     private boolean arvosteltu = false;
     private double rating = 0.0;

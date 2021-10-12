@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author Mikko Tanhola
  * Ohjelman MainActivity toimii ohjelman keskeisenä Activitynä
  * MainActivityssä on 4 nappia, joilla pääsee
  * syötäTiedotActivityyn, PäiväkirjaActivityyn, HallOfFameActivityyn ja InfoActivityyn
