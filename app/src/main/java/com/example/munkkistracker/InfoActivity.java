@@ -1,5 +1,7 @@
 package com.example.munkkistracker;
 /**
+ * @Author Sara Oksanen
+ * @Author Lilian Aasa
  * InfoActivityyn on kerätty tiedot sovelluksen tekijöistä ja sieltä löytyy myös "Reset nappi
  * joka nollaa koko sovelluksen
  *
@@ -35,7 +37,7 @@ public class InfoActivity extends AppCompatActivity {
         aloitus.setText("Tämän sovelluksen teille toi");
 
         TextView nimet = findViewById(R.id.info_nimet);
-        nimet.setText("Aasa Lilian\n Kyyrä Kerttu\nOksanen Sara\nTanhola Mikko");
+        nimet.setText("Aasa Lilian\nKyyrä Kerttu\nOksanen Sara\nTanhola Mikko");
 
         TextView koulu = findViewById(R.id.info_koulu);
         koulu.setText("Metropolia\nMobiilit Terveyssovellukset\n2021");
