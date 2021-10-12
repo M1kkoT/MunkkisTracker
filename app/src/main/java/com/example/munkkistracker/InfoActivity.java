@@ -1,4 +1,15 @@
 package com.example.munkkistracker;
+/**
+ * InfoActivityyn on kerätty tiedot sovelluksen tekijöistä ja sieltä löytyy myös "Reset nappi
+ * joka nollaa koko sovelluksen
+ *
+ * onCreate()
+ * Asetetaan tekstit UI TextView näkymiin .setText komennolla
+ * Asetetaan kuva UI ImageView näkymään .setImageResource komennolla
+ *
+ * Button reset
+ * OnClick() Poistaa tallennetut tiedot sovelluksesta ja palauttaa käyttäjän MainActivityyn
+ */
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,8 +22,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +55,4 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-
 }

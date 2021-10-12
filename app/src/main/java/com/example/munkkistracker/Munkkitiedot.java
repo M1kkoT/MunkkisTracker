@@ -156,7 +156,6 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
             }
             double ka = (double) (summa / ratingslist.size());
             return ka;
-
         } else {
             return ratingslist.get(0); //jos arvosteluja on vain yksi
         }
@@ -182,7 +181,6 @@ public class Munkkitiedot { //luokka johon tallennetaan tiedot ja joka tallennet
         }else if (munkki.equals("Munkkirinkila")){
             this.rinkila += kpl;
         }
-
     }
 
 

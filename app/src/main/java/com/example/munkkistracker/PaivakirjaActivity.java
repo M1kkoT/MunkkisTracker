@@ -47,7 +47,4 @@ public class PaivakirjaActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
 }
