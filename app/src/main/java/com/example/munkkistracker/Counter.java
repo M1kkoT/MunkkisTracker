@@ -2,6 +2,7 @@ package com.example.munkkistracker;
 
 
 /**
+ * @author Kerttu Kyyrä
  * Laskija-luokka laskutoimituksille
  * viisi luokkamuuttujaa , hinnalle, kaloreille, rasvalle, sokerille ja kappalemäärälle
  * konstruktori

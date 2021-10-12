@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Locale;
 
 /**
+ * @author Kerttu Kyyrä
+ * @author Lilian Aasa
  *
  */
 
