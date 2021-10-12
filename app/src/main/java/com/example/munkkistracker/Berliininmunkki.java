@@ -1,6 +1,7 @@
 package com.example.munkkistracker;
 
 /**
+ * @author Sara Oksanen
  * Berliininmunkki-luokka toteuttaa rajapinnan Munkki
  * Konstruktori
  * asettaa arvot berliininmunkin oliomuuttujille (fat, sugar, cal)
