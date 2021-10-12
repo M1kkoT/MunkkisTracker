@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author Mikko Tanhola
  * Ohjelman MainActivity toimii ohjelman keskeisenä Activitynä
  * MainActivityssä on 4 nappia, joilla pääsee
  * syötäTiedotActivityyn, PäiväkirjaActivityyn, HallOfFameActivityyn ja InfoActivityyn
  * MainActivityssä tapahtuu tietojen tallennus gsonin avulla
  *
  * 3 luokkamuuttujaa
- * Gson luokan olia gson - käytetään tiedon tallentamiseen json-stringinä
+ * Gson luokan olio gson - käytetään tiedon tallentamiseen json-stringinä
  * String Pref - käytetään ohjelmassa käytetyn sharedprefrerencen nimenä
  * String Lista - sharedpreferenceseihin tallennetun json stringin nimi
  *

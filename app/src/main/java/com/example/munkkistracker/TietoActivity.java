@@ -1,13 +1,23 @@
 package com.example.munkkistracker;
 
 /**
+ * @author Mikko Tanholo
+ * @author Sara Oksanen
  * TietoActivity näyttää päiväkohtaiset tiedot käyttäjän syötteestä
+ *
+ * Activity saa extrana PäiväkirjaActivitystä listan indeksin numeron eli mitä listan alkiota klikattiin
+ *
+ * tämän indeksin avulla haetaan MunkkiList singleton luokan listasta samalla indeksillä olevan
+ * Munkkitiedot olion tiedot näytettäväksi activitynssä
+ *
  *
  *
  * Luodaan double muuttuja "kokoluku", missä lasketaan käyttäjän syömien munkkien yhteismäärä
  *
  * Asetetaan UI TextView näkymiin String tekstit ja haetaan päiväkohtaiset munkkitiedot
  * arraylististä.
+ *
+ * hinta ja arvostelut näytetään kahden desimaalin tarkkuudella
  */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +32,8 @@ public class TietoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tieto);
-        Bundle bundle = getIntent().getExtras(); //testikoodia
-        int i = bundle.getInt(PaivakirjaActivity.EXTRA, 0); //i on listan indeksi
+        Bundle bundle = getIntent().getExtras();
+        int i = bundle.getInt(PaivakirjaActivity.EXTRA, 0); //saa extranan listan indeksin päiväkirjaActivitystä
 
         TextView pvm = findViewById(R.id.tieto_pvm);
         pvm.setText(MunkkiList.getInstance().getMunkit().get(i).getPvm());

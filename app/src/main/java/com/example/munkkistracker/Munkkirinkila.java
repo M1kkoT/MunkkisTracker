@@ -1,6 +1,7 @@
 package com.example.munkkistracker;
 
 /**
+ * @author Kerttu Kyyrä
  * Munkkirinkila-luokka toteuttaa rajapinnan Munkki
  * Kontruktori
  * asettaa arvot Munkkirinkilan oliomuuttujille (fat, sugar, cal)

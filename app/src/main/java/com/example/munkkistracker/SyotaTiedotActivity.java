@@ -23,6 +23,28 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * @author Mikko Tanhola
+ *
+ * SyötäTiedotActivityssä käyttäjältä kerätään tietoja ja ne tallennetaan sovellukseen
+ * käyttäjän syötettä kerätään radiobuttoneilla, EditTextillä ja Ratingbarilla
+ *
+ * Luokkamuuttujia
+ * arvosteltu (boolean) defaulttina "false" - käytetään tarkistamaan onko käyttäjä arvostellut munkit
+ * rating (double) defaulttina 0.0; - arvostelu desimaalilukuna (0-5)
+ * Talle (static final String) "talle" - Mainactivityyn lähetettävän Extran nimi
+ *
+ * aluksi ohjelma tallentaa tämänhetkisen päivän päivämäärän "date" muuttujaan
+ *
+ * alustetaan TextView ja EditText elementit
+ *
+ * alustetaan RatinBar ja asetetaan sille OnRatingChangeListener, jonka avulla tarkistetaan, onko
+ * käyttäjä antanut arvostelun -> jos käyttäjä on antanut arvostelun §
+ *
+ *
+ *
+ */
+
 public class SyotaTiedotActivity extends AppCompatActivity {
     private boolean arvosteltu = false;
     private double rating = 0.0;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author Mikko Tanhola
  * Luokka johon tallennetaan kaikki mahdolliset sovelluksessa tarvittavat tiedot
  * tänän luokan olio kuvaa käyttäjän yhtenä päivänä syöttämiä tietoja
  * Tämän luokan olioita tallennetaan singleton luokkaan "MunkkiList"

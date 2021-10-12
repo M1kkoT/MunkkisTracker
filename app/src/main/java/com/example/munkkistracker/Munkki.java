@@ -1,6 +1,7 @@
 package com.example.munkkistracker;
 
 /**
+ * @author Mikko Tanhola
  * Rajapinta Munkki-tyyppiselle oliolle
  * metodit
  * getRasva()

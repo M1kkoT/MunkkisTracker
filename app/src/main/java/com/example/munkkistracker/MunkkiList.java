@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 
-public class MunkkiList {
+public class MunkkiList {   //kopioitu opetusdioista
     private List<Munkkitiedot> munkit;
     private static final MunkkiList ourInstance = new MunkkiList();
 
