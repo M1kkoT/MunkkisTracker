@@ -10,11 +10,17 @@ package com.example.munkkistracker;
  * @param lukum munkkien lukumäärä
  * metodit
  * getCost()
- * @return palauttaa kokonaishinnan (hinta * kappalemäärä)
+ * @return palauttaa kokonaishinnan (hinta * kappalemäärä) (double)
  * getKcal()
- * @return palauttaa kalorimäärän (kalorimäärä * kappalemäärä)
+ * @return palauttaa kalorimäärän (kalorimäärä * kappalemäärä) (int)
  * getfat()
- *
+ * palauttaa kokonaisrasvamäärän (kalorimäärä * kappalemäärä) (double)
+ * geSugar()
+ * palauttaa kokonaissokerimäärän (sokerimäärä * kappalemäärä) (double)
+ * getKpl()
+ * palauttaa kappalemäärän (ei käytetä tällä hetkellä mihinkään) (double(koska sovellus hyväksyy käyttäjältä osittaisia munkkeja esim. puolikkaita))
+ * toString()
+ * palauttaa tekstin, joka kertoo kaikkien edellämainittujen tietojen arvot
  *
  */
 

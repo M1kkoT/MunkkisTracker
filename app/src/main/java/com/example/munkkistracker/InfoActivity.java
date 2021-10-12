@@ -1,4 +1,17 @@
 package com.example.munkkistracker;
+/**
+ * @Author Sara Oksanen
+ * @Author Lilian Aasa
+ * InfoActivityyn on kerätty tiedot sovelluksen tekijöistä ja sieltä löytyy myös "Reset nappi
+ * joka nollaa koko sovelluksen
+ *
+ * onCreate()
+ * Asetetaan tekstit UI TextView näkymiin .setText komennolla
+ * Asetetaan kuva UI ImageView näkymään .setImageResource komennolla
+ *
+ * Button reset
+ * OnClick() Poistaa tallennetut tiedot sovelluksesta ja palauttaa käyttäjän MainActivityyn
+ */
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,8 +25,6 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +37,7 @@ public class InfoActivity extends AppCompatActivity {
         aloitus.setText("Tämän sovelluksen teille toi");
 
         TextView nimet = findViewById(R.id.info_nimet);
-        nimet.setText("Aasa Lilian\n Kyyrä Kerttu\nOksanen Sara\nTanhola Mikko");
+        nimet.setText("Aasa Lilian\nKyyrä Kerttu\nOksanen Sara\nTanhola Mikko");
 
         TextView koulu = findViewById(R.id.info_koulu);
         koulu.setText("Metropolia\nMobiilit Terveyssovellukset\n2021");
@@ -46,8 +57,4 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-
 }

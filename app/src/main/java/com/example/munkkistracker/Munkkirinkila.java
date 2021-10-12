@@ -1,5 +1,21 @@
 package com.example.munkkistracker;
 
+/**
+ * Munkkirinkila-luokka toteuttaa rajapinnan Munkki
+ * Kontruktori
+ * asettaa arvot Munkkirinkilan oliomuuttujille (fat, sugar, cal)
+ *
+ * metodit
+ * getRasva()
+ * @return palauttaa munkkirinkilan oliomuuttujan rasva (fat) arvon (14)
+ * getKcal()
+ * @return palauttaa munkkirinkilan oliomuuttujan kalori (kcl) arvon (328)
+ * getSokeri()
+ * @return palauttaa munkkirinkilan oliomuuttujan sokeri (sugar) arvon (7)
+ * toString()
+ * @return palauttaa String "Munkkirinkila"
+ */
+
 public class Munkkirinkila implements Munkki{ //luokka munkkirinkilän tiedoille
     private double fat;
     private double sugar;

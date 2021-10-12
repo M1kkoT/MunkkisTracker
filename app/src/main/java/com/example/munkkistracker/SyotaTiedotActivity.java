@@ -59,10 +59,10 @@ public class SyotaTiedotActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String tekst = Integer.toString(MunkkiList.getInstance().getMunkit().size());
                 double testi = Double.parseDouble(tekst);
-                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 2, 2, 2, testi, "testi" + tekst, 2.5, "Berliininmunkki", 2));
+                MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 15, 15, 15, testi, "testi" + tekst, 3.5, "Berliininmunkki", 1));
 
                 //koodi rajoittamaan listan alkioiden määrää testaukseen
-                if (MunkkiList.getInstance().getMunkit().size() > 5) { // vihda tähän luku kuinka ison listan haluat
+                if (MunkkiList.getInstance().getMunkit().size() > 30) { // vihda tähän luku kuinka ison listan haluat
 
                     MunkkiList.getInstance().getMunkit().remove(0);
 
@@ -126,6 +126,12 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     toast.show();
                     return;
                 }
+                if (volume.getText().toString().equals("0")){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Kappalemäärä ei voi olla 0!", Toast.LENGTH_LONG); //ilmoitus jos käyttäjä syöttää kappalemääräksi "0"
+                    toast.show();
+                    return;
+
+                }
                 if (!arvosteltu){
                     Toast toast = Toast.makeText(getApplicationContext(), "Arvostele munkit!", Toast.LENGTH_LONG); //pyytää käyttäjää arvostelemaan munkit
                     toast.show();
@@ -145,7 +151,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                     munkki.setFat(munkki.getFat() + counter.getFat());
                     munkki.setSugar(munkki.getSugar() + counter.getSugar());
                     munkki.setHinta(munkki.getHinta() + counter.getCost());
-                    munkki.setArvostelu(rating); // arvostelut tallentuvat päiväkohtaisesti listaan ja näin saadaan laskettua keskiarvo jos päivältä tulee useita arvosteluja
+                    munkki.addArvostelu(rating); // arvostelut tallentuvat päiväkohtaisesti listaan ja näin saadaan laskettua keskiarvo jos päivältä tulee useita arvosteluja
                     munkki.addMunkkiKpl(b.toString(), kpl);
 
                 }
@@ -159,6 +165,4 @@ public class SyotaTiedotActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
