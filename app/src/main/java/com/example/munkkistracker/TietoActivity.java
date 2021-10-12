@@ -48,5 +48,4 @@ public class TietoActivity extends AppCompatActivity {
         TextView huom = findViewById(R.id.tieto_huom);
         huom.setText("Huomaathan että ravintoarvot ovat suuntaa antavia");
     }
-
 }
