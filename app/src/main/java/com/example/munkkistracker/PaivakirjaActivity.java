@@ -21,6 +21,28 @@ import java.util.Locale;
  * @author Kerttu Kyyrä
  * @author Lilian Aasa
  *
+ * Activity, jossa on listview elementti, joka näyttää maksimissaan 30 tallennettua päivää ja
+ * päivää klikkaamalla pääsee tarkastelemaan kyseisen päivän tietoja
+ *
+ * Luokkamuuttujat
+ * Intetntillä lähetettävän tiedon nimi "index" (static final String)
+ * Arraylista johon tallennetaan päivämääriä
+ *
+ * aluksi alustetaan lista ja lisätään listaan päivämäärät, jotka saadaan MunkkiList singleton luokkaan
+ * tallennetuista olioista komennolla MunkkiList.getInstance().getMunkit().get(i).getPvm())
+ *
+ * adapteri listwieville
+ * this konteksti
+ * android.R.layout.simple_list_item_1 list layout listan ListViewin alkioille
+ * paivat lista, josta saadaan tulostettava teksti ListWievin alkioille
+ *
+ * OnItemClickListener adapterViewille
+ * Klikkaamalla ListViewin alkiota siirrytään TietoActivityyn ja annetaan mukaan extrana klikatun
+ * listView elementin indeksi paivat listalla (joka on sama kuin kyseisen päivän indeksi MunkkiList
+ * luokan listalla)
+ *
+ *
+ *
  */
 
 public class PaivakirjaActivity extends AppCompatActivity {

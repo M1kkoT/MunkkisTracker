@@ -1,7 +1,8 @@
 package com.example.munkkistracker;
 
 /**
- *
+ * @author Mikko Tanholo
+ * @author Sara Oksanen
  * TietoActivity näyttää päiväkohtaiset tiedot käyttäjän syötteestä
  *
  * Activity saa extrana PäiväkirjaActivitystä listan indeksin numeron eli mitä listan alkiota klikattiin
