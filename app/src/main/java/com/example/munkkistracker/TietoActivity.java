@@ -1,5 +1,15 @@
 package com.example.munkkistracker;
 
+/**
+ * TietoActivity näyttää päiväkohtaiset tiedot käyttäjän syötteestä
+ *
+ *
+ * Luodaan double muuttuja "kokoluku", missä lasketaan käyttäjän syömien munkkien yhteismäärä
+ *
+ * Asetetaan UI TextView näkymiin String tekstit ja haetaan päiväkohtaiset munkkitiedot
+ * arraylististä.
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -17,11 +27,14 @@ public class TietoActivity extends AppCompatActivity {
 
         TextView pvm = findViewById(R.id.tieto_pvm);
         pvm.setText(MunkkiList.getInstance().getMunkit().get(i).getPvm());
-        //textview x .setText(MunkkiList.getInstance().getMunkit().get(i).XXXX tällä saa tietyn tiedon jos haluaa monta tekstikenttää
+        //textview x .setText(MunkkiList.getInstance().getMunkit().get(i).XXXX
+        // tällä saa tietyn tiedon jos haluaa monta tekstikenttää
         //korvaa XXXX getRasva yms ja textview x omalla Textvievillä
 
         //Laskee kuinka monta munkkia on yhteensä syöty
-        double kokoluku = (MunkkiList.getInstance().getMunkit().get(i).getHillo()) + (MunkkiList.getInstance().getMunkit().get(i).getBerlin()) + (MunkkiList.getInstance().getMunkit().get(i).getRinkila());
+        double kokoluku = (MunkkiList.getInstance().getMunkit().get(i).getHillo()) +
+                (MunkkiList.getInstance().getMunkit().get(i).getBerlin()) +
+                (MunkkiList.getInstance().getMunkit().get(i).getRinkila());
 
         TextView maara = findViewById(R.id.tieto_maara);
         maara.setText("Olet syönyt yhteensä "+kokoluku+" munkkia. ");
