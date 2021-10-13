@@ -125,7 +125,13 @@ public class SyotaTiedotActivity extends AppCompatActivity {
         EditText hinta = findViewById(R.id.editTextHinta);
 
 
-        Button testi = findViewById(R.id.button_testi); // testinappula jolla voi lisätä listoille alkioita
+        Button testi = findViewById(R.id.button_testi);
+        // testinappula jolla voi lisätä listalle alkioita (jotka näkyvät päiväkirjassa)
+        // huom!!!! testinappula ei kuulu lopulliseen sovellukseen
+        //!! sovellus tallentaa tietoja aina viimeisimpään MunkkiTiedot olioon, joten jos
+        // testinappulalla luodaan uusi alkio listalle manuaalisesti syötettyjen tietojen jälkeen
+        // seuraavat manuaalisesti syötettävät tiedot samana päivänä menevät listan viimeiseen
+        // alkioon
         testi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
