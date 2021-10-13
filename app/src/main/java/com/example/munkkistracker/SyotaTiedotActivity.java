@@ -105,8 +105,8 @@ public class SyotaTiedotActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syota_tiedot);
-        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()); //tällä saa päivämäärän
-
+        String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date()); //tällä saa päivämäärän
+        //developer.android.com/reference/java/text/SimpleDateFormat
 
         //Asetetaan TextView tekstit
         TextView maara = findViewById(R.id.tv_maara);
@@ -190,6 +190,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 }else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Valitse munkki", Toast.LENGTH_LONG); //ilmoitus jos ei ole valittu munkkia ja lopettaa toiminnan
                     toast.show();
+                    //developer.android.com/guide/topics/ui/notifiers/toasts
                     return;
 
                 }
