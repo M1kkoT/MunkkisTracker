@@ -39,7 +39,57 @@ import java.util.Locale;
  * alustetaan TextView ja EditText elementit
  *
  * alustetaan RatinBar ja asetetaan sille OnRatingChangeListener, jonka avulla tarkistetaan, onko
- * käyttäjä antanut arvostelun -> jos käyttäjä on antanut arvostelun §
+ * käyttäjä antanut arvostelun -> jos käyttäjä on antanut arvostelun
+ *
+ * alustetaan "tallenna" nappula ja asetetaan sille onClickListener
+ * --kaikki koodin seuraavat toiminnot tapahtuvat, kun nappia painetaan--
+ *
+ * aluksi sovellus katsoo onko tämän päivän päivämäärälle tallennettu jo Munkkitiedot luokan olio
+ * vaihtaa muuttujan "totuus" (boolean) trueksi, jos pvm on jo tallennettu
+ *
+ * alustetaan Munkki luokan olio ja radiobuttonit
+ *
+ * katsotaan, mikä radiobutton on valittu tai jos ei mitään niin annetaan virheilmoitust Toast - luokan avulla
+ * luodaan sen tyypin munkki mikä on valittu radiobuttonilla
+ *
+ * seuraavaksi koodi tarkastaa onko käyttäjän antamat syötteet tyhjiä tai onko kappalemääräksi syötetty "0"
+ * (sovellus hyväksyy osittaisia kappalemmääriä esim 0.5kpl ja hinnaksi 0€)
+ * jos tietoja ei ole annettu tai kpl on "0" tulee taas virheilmmoitus Toast - luokan avullaa
+ *
+ * alustetaan ja muutetaan muuttujat hinnalle (double cost) ja kappalemäärälle (double kpl) desimaaliluvuiksi
+ * nämä saadaan EditText vieweistä
+ *
+ * luodaan uusi counter luokan olio
+ * @param b munkki joka luotiin radiobuttonin perusteella
+ * @param cost hinta joka saadaan käyttäjän syötteestä
+ * @param kpl kappalemäärä joka saadaan käyttäjän syötteestä
+ *
+ * jos päivälle ei ole vielä luotu MunkkTiedot oliota (totuus = false), niin luodaan se ja lisätään
+ * MunkkiList singleton luokan listaan
+ * @param counter.getFat() - tallennettavan rasvan määrä (double)
+ * @param counter.getSugar() - tallennettavan sokerin määrä (double)
+ * @param counter.getKcal() - tallennettava kalorimäärä (int)
+ * @param counter.getCost() - tallennettava hinta (double)
+ * @param date - tallennettava päivämäärä (String)
+ * @param rating - tallennettava arvostelu (double välillä 0-5)
+ * @param b.toString() - munkin tyyppi (String "Berliininmunkki" , "Hillomunkki" tai "Munkkirinkila")
+ * @param kpl - kappalemäärä
+ *
+ * jos Munkkitiedot luokan olio on jo tälle päivälle tallennettu, niin muokataan tätä oliota
+ * lisäämällä uudet tiedot vanhoihin
+ *
+ * ohjelma tarkastaa ylittääko MunkkiList luokan lista 30 alkiota
+ *      -jos ylittää, niin poistetaan listan ensimmäinen alkio ja näin lista pysyy aina maksimissaan
+ *      30 alkion pituisena
+ *
+ * lopuksi palataan mainactivityyn ja lähetetään Extrana arvo "1", jonka avulla MainActivity
+ * tietää, että siihen palataan tietojen tallennuksen jälkeen eikä se lataa sharedpreferencejä
+ *          (jos MainActivity lataisi sharedpreferencet heti kun siihen palataan ei uusia tietoja
+ *          olisi vielä ehditty tallentaa sharedpreferenceihin ja tietojen syöttäminen ei tallentuisi
+ *          mihinkään)
+ *
+ *
+ *
  *
  *
  *

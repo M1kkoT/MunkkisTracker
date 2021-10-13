@@ -32,9 +32,9 @@ import java.util.Locale;
  * tallennetuista olioista komennolla MunkkiList.getInstance().getMunkit().get(i).getPvm())
  *
  * adapteri listwieville
- * this konteksti
- * android.R.layout.simple_list_item_1 list layout listan ListViewin alkioille
- * paivat lista, josta saadaan tulostettava teksti ListWievin alkioille
+ * @param this konteksti
+ * @param android.R.layout.simple_list_item_1 list layout listan ListViewin alkioille
+ * @param paivat lista, josta saadaan tulostettava teksti ListWievin alkioille
  *
  * OnItemClickListener adapterViewille
  * Klikkaamalla ListViewin alkiota siirrytään TietoActivityyn ja annetaan mukaan extrana klikatun

@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author Mikko Tanhola
  * singleton luokka tietojen tallennukseen
  * tiedot tallennetaan listaan Munkkitiedot-olioina
+ * MunkkiListiin pääsee käsiksi kaikkialta sovelluksesta
  *
  */
 
