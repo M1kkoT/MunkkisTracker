@@ -134,7 +134,7 @@ public class SyotaTiedotActivity extends AppCompatActivity {
                 MunkkiList.getInstance().getMunkit().add(new Munkkitiedot( 15, 15, 15, testi, "testi" + tekst, 3.5, "Berliininmunkki", 1));
 
                 //koodi rajoittamaan listan alkioiden määrää testaukseen
-                if (MunkkiList.getInstance().getMunkit().size() > 30) { // vihda tähän luku kuinka ison listan haluat
+                if (MunkkiList.getInstance().getMunkit().size() > 6) { // vihda tähän luku kuinka ison listan haluat
 
                     MunkkiList.getInstance().getMunkit().remove(0);
 
